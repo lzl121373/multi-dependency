@@ -1,0 +1,23 @@
+.div_cytoscape_div{
+}
+.div_cytoscape {
+	width: 83%;
+	height: 800px;
+	margin-bottom: 5px;
+}
+.div_cytoscape_content {
+	width: 100%;
+	height: 800px;
+	border: 1px solid #000;
+}
+.div_cytoscape_treeview {
+	padding: 5px;
+	width: 17%; 
+	float: left; 
+	display: inline; 
+	overflow: scroll;
+	border-left: 1px solid #000;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	height: 800px;
+}

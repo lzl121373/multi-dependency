@@ -1,0 +1,26 @@
+{
+	"projects": [{
+		"path": "D:\\git\\article\\halo-1.2.0",
+		"language": "java"
+	}],
+	"gits": [{
+		"path": "D:\\git\\article\\halo-1.2.0",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "117883fc8de97900aa8ad6f36f2307857cb049d4",
+		"commit_id_to" : "a4da9a7d583eae9817310cf766ea9f0935fb4c2d",
+		"commit_id_current" : "753a3bc998c7729a137cedb8fc2ba1b37dff41bd",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\halo"
+ 	}],
+ 	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/halo-fan/1.2.0/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/halo-fan/1.2.0/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/halo-fan/1.2.0/result/type123_method_group_result.csv"
+	}],
+	"dynamics": {
+	},
+	"architectures": {},
+	"libs": []
+}

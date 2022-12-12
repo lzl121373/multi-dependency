@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Git首页</title>
+	<script type="text/javascript" th:src="@{/js/import/jquery-1.12.0.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+	<script type="text/javascript" th:src="@{/js/git.js}"></script>
+</head>
+<body>
+<div th:include="nav.html::nav"></div>
+
+<div class="container-lg col-sm-12 row" style="margin-bottom: 15px;">
+	<div class="col-sm-3">
+		<ul>
+			<li><a href="#gitRepoDiv">GitRepo</a></li>
+			<li><a href="#gitCommitDiv">Commit</a></li>
+			<li><a href="#gitIssueDiv">Issue</a></li>
+		</ul>
+	</div>
+	<div id="gitRepoDiv" class="col-sm-12">
+		<div><h3>GitRepo</h3></div>
+		<div class="col-sm-12"><button id="gitRepoButton" class="btn btn-primary">输出 excel</button></div>
+		<div id="gitRepoMetric" class="col-sm-12">
+
+		</div>
+	</div>
+<!--	<div id="gitCommitDiv" class="col-sm-12">-->
+<!--		<div><h3> Commit </h3></div>-->
+<!--		<div class="col-sm-12"><button id="gitCommitButton" class="btn btn-primary">输出 excel</button></div>-->
+<!--		<div id="gitCommitInfo" class="col-sm-12">-->
+
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div id="gitIssueDiv" class="col-sm-12">-->
+<!--		<div><h3> Issue </h3></div>-->
+<!--		<div class="col-sm-12"><button id="gitIssueButton" class="btn btn-primary">输出 excel</button></div>-->
+<!--&lt;!&ndash;		<div class="col-sm-12"><button id="gitIssueButton" class="btn btn-primary">全部输出</button><a href="/metric/excel/file">打印</a></div>&ndash;&gt;-->
+<!--		<div id="gitIssueInfo" class="col-sm-12">-->
+
+<!--		</div>-->
+<!--	</div>-->
+	<div id="gitDeveloperDiv" class="col-sm-12">
+		<div><h3> Developer </h3></div>
+		<div class="col-sm-12"><button id="gitDeveloperButton" class="btn btn-primary">输出 excel</button></div>
+		<!--		<div class="col-sm-12"><button id="gitIssueButton" class="btn btn-primary">全部输出</button><a href="/metric/excel/file">打印</a></div>-->
+		<div id="gitDeveloperInfo" class="col-sm-12">
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" th:inline="javascript">
+	//<![CDATA[
+	$(document).ready(function() {
+		gitRepoMetric().init();
+	});
+	// ]]>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Details</title>
+    <script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/jquery.treeview.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/d3.v3.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-hierarchical.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/layout-base-1.0.2.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cose-base-1.0.2.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-cose-bilkent-4.1.0.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-undo-red-1.3.3.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-expand-collapse.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/ztree/jquery.ztree.all.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/echarts-4.7.0/dist/echarts.js}"></script>
+    <script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+    <script type="text/javascript" th:src="@{/js/cloneaggregation.js}"></script>
+    <script type="text/javascript" th:src="@{/js/clonecompareutils.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/cytoscape.js-panzoom.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/cytoscape.js-navigator.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/jquery.jqplot.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/ztree/zTreeStyle/zTreeStyle.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/circlechart.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/doublefile_tree.css}"></link>
+
+    <style type="text/css">
+        #table thead, #table body{
+            width: calc(100% - 1em)
+        }
+    </style>
+</head>
+<body>
+    <div th:include="nav.html::nav"></div>
+    <div class="col-sm-12">
+        <div id="package_clone_detail"></div>
+        <div id="package_files_tree"></div>
+        <div id="package_files_clone"></div>
+<!--        <div class="col-sm-12" id="fileClonesGraph"></div>-->
+        <div id="package_files_clone_matrix"></div>
+    </div>
+    <script type="text/javascript" th:inline="javascript">
+        $(document).ready(function () {
+            var URL = window.location.search;
+            URL = URL.split('?')[1];
+            var params = URL.split('&');
+            var id1 = [[${id1}]];
+            var id2 = [[${id2}]];
+            var path1 = params[2].split('=')[1];
+            var path2 = params[3].split('=')[1];
+            var clonePairs = [[${clonePairs}]];
+            var cloneNodesCount1 = [[${cloneNodesCount1}]];
+            var cloneNodesCount2 = [[${cloneNodesCount2}]];
+            var allNodesCount1 = [[${allNodesCount1}]];
+            var allNodesCount2 = [[${allNodesCount2}]];
+            var cloneMatchRate = [[${cloneMatchRate}]];
+            var cloneNodesLoc1 = [[${cloneNodesLoc1}]];
+            var cloneNodesLoc2 = [[${cloneNodesLoc2}]];
+            var allNodesLoc1 = [[${allNodesLoc1}]];
+            var allNodesLoc2 = [[${allNodesLoc2}]];
+            var cloneLocRate = [[${cloneLocRate}]];
+            var cloneNodesCoChangeTimes = [[${cloneNodesCoChangeTimes}]];
+            var allNodesCoChangeTimes = [[${allNodesCoChangeTimes}]];
+            var cloneCoChangeRate = [[${cloneCoChangeRate}]];
+            var cloneType1Count = [[${cloneType1Count}]];
+            var cloneType2Count = [[${cloneType2Count}]];
+            var cloneType3Count = [[${cloneType3Count}]];
+            var cloneType = params[21].split('=')[1];
+            var cloneSimilarityValue = [[${cloneSimilarityValue}]];
+            var cloneSimilarityRate = [[${cloneSimilarityRate}]];
+            showDetails(id1, id2, path1, path2, clonePairs, cloneNodesCount1, cloneNodesCount2, allNodesCount1, allNodesCount2, cloneMatchRate, cloneNodesLoc1, cloneNodesLoc2, allNodesLoc1, allNodesLoc2, cloneLocRate, cloneNodesCoChangeTimes, allNodesCoChangeTimes, cloneCoChangeRate, cloneType1Count, cloneType2Count, cloneType3Count, cloneType, cloneSimilarityValue, cloneSimilarityRate);
+        });
+    </script>
+</body>
+</html>

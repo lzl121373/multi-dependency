@@ -1,0 +1,51 @@
+{
+  "architectures": {},
+  "projects": [{
+    "path": "D:\\program\\httpd",
+    "includeDirs": [],
+    "microserviceName": "httpd",
+    "autoInclude": true,
+    "serviceGroupName": "httpd",
+    "project": "httpd",
+    "language": "cpp",
+    "isMicroservice": true,
+    "excludes": [
+    ]
+  }],
+  "dynamics": {
+    "file_suffixes": [
+      ""
+    ],
+    "logs_path": "",
+    "features_path": ""
+  },
+  "gits": [
+    {
+      "path": "D:\\program\\httpd",
+      "project": "httpd",
+      "specify_commit_range": false,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_id_current": "",
+      "commit_time_since": "2016-01-01 00:00:00",
+      "commit_time_until": "2021-01-31 23:59:59",
+      "issueFrom": "jira",
+      "issues_directory": "",
+      "calculate_cochange": false
+    }],
+  "libs": [],
+  "clones": [{
+    "language": "cpp",
+    "granularity": "file",
+    "name_path": "src/main/resources/clone/file/httpd-li/result/MeasureIndex.csv",
+    "result_path": "src/main/resources/clone/file/httpd-li/similarity.csv",
+    "group_path" : "src/main/resources/clone/file/httpd-li/result/type123_method_group_result.csv"
+  }, {
+    "language": "cpp",
+    "granularity": "function",
+    "name_path": "src/main/resources/clone/function/httpd-li/result/MeasureIndex.csv",
+    "result_path": "src/main/resources/clone/function/httpd-li/similarity.csv",
+    "group_path" : "src/main/resources/clone/function/httpd-li/result/type123_method_group_result.csv"
+  }]
+}

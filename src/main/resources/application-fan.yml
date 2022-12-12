@@ -1,0 +1,64 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: 19970129Fan
+      uri: bolt://localhost:7687
+#      uri: http://localhost:7474
+      # embedded
+#      uri: file:///D:/neo4j-community-3.5.3-windows/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+  thymeleaf:
+    cache: false 
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+   port: 8080
+
+config:
+   starter:
+      cochange: true
+      depends_on: true
+      clone_group: false
+      module_clone: false
+      aggregation_clone: false
+      
+      smell: true
+
+data:
+#   project_config: src/main/resources/project/simpletest.json
+#   project_config: src/main/resources/project/train-ticket_fan.json
+#   project_config: src/main/resources/project/leveldb.json
+#   project_config: src/main/resources/project/source-fan-part.json
+#   project_config: src/main/resources/project/source-fan-part-google.json
+#   project_config: src/main/resources/project/google_fdse_guava_fan.json
+#   project_config: src/main/resources/project/cassandra_fan.json
+#   project_config: src/main/resources/project/guava_version_fan_solo.json
+   project_config: src/main/resources/project/fan/fastjson_version_fan.json
+#   project_config: src/main/resources/project/fan/fastjson_fan.json
+#   project_config: src/main/resources/project/fan/halo_fan.json
+#   project_config: D:/git/multi-dependency/src/main/resources/project/fastjson-1.2.31.json
+#   project_config: D:/git/multi-dependency/src/main/resources/project/multiple-dependency.json
+#   project_config: src/main/resources/project/fastjson_version_fan2.json
+#   project_config: src/main/resources/project/depends_fan.json
+#   project_config: src/main/resources/project/depends_fan2.json
+   project_analyse_threads_count: 10
+   dynamic_analyse: false
+   git_analyse: true
+   lib_analyse: false
+   clone_analyse: true
+   neo4j:
+      delete: true
+      # batchInserter要插入的数据库
+#      path: D:/neo4j-community-3.5.3-windows/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+#      path: D:/neo4j-community-3.5.16/data/databases/multiple.dependency.db
+      path: D:/neo4j-community-3.5.16/data/databases/multiple.dependency.db
+#      path: D:/neo4j-community-3.5.16/data/databases/multiple.dependency-fastjson.db
+#      path: D:/neo4j-community-3.5.16/data/databases/multiple.dependency.depends.versions.db
+      
+   serialize_path: D:/multiple-dependency-project/RepositoryService.txt
+#   serialize_path: D:/multiple-dependency-project/RepositoryService-google.txt
+#   serialize_path: D:/multiple-dependency-project/RepositoryService-depends-versions.txt
+#   serialize_path: D:/multiple-dependency-project/RepositoryService-cassandra.txt
+#   sericalize_path: D:/multiple-dependency-project/RepositoryService-fastjson.txt
+#    
+   test: this property is for YamlUtilsTest

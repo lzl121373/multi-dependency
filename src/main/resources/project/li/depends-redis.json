@@ -1,0 +1,50 @@
+{
+  "architectures": {},
+  "projects": [
+    {
+      "path": "D:\\FDSE\\guava",
+      "includeDirs": [],
+      "microserviceName": "guava",
+      "autoInclude": true,
+      "serviceGroupName": "source-guava",
+      "project": "guava",
+      "language": "java",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    }
+  ],
+  "dynamics": {
+  },
+  "gits": [
+    {
+      "path": "D:\\FDSE\\guava",
+      "project": "guava",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    }
+  ],
+  "libs": [
+  ],
+  "clones": [
+    {
+      "language"   : "java",
+      "granularity": "file",
+      "name_path"  : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\MeasureIndex.csv",
+      "result_path": "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\similarity.csv",
+      "group_path" : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\type123_method_group_result.csv"
+    },{
+      "language"   : "java",
+      "granularity": "function",
+      "name_path"  : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\result\\MeasureIndex.csv",
+      "result_path": "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\similarity.csv",
+      "group_path" : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\result\\type123_method_group_result.csv"
+    }
+  ]
+}

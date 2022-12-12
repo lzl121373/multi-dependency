@@ -1,0 +1,38 @@
+{
+  "architectures": {},
+  "projects": [{
+    "path": "D:\\program\\atlas",
+    "includeDirs": [],
+    "microserviceName": "atlas",
+    "autoInclude": true,
+    "serviceGroupName": "atlas",
+    "project": "atlas",
+    "language": "java",
+    "isMicroservice": true,
+    "excludes": [
+    ]
+  }],
+  "dynamics": {
+    "file_suffixes": [
+      ""
+    ],
+    "logs_path": "",
+    "features_path": ""
+  },
+  "gits": [{
+    "path": "D:\\program\\atlas",
+    "project": "atlas",
+    "specify_commit_range": false,
+    "specify_by_commit_id": false,
+    "commit_id_from": "",
+    "commit_id_to": "",
+    "commit_id_current": "",
+    "commit_time_since": "2016-01-01 00:00:00",
+    "commit_time_until": "2021-01-31 23:59:59",
+    "issueFrom": "jira",
+    "issues_directory": "",
+    "calculate_cochange": false
+  }],
+  "libs": [],
+  "clones": []
+}

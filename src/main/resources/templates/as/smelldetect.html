@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Smell Detect</title>
+	<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/jquery.treeview.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/jquery-1.12.0.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/d3.v3.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-hierarchical.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/layout-base-1.0.2.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cose-base-1.0.2.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-cose-bilkent-4.1.0.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-undo-red-1.3.3.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-expand-collapse.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/ztree/jquery.ztree.all.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/echarts-4.7.0/dist/echarts.js}"></script>
+	<script type="text/javascript" th:src="@{/js/windowUtil.js}"></script>
+	<script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+	<script type="text/javascript" th:src="@{/js/as/smelldetect.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-panzoom.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-navigator.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/jquery.jqplot.css}"/>
+	<link rel="stylesheet" th:href="@{/css/import/ztree/zTreeStyle/zTreeStyle.css}"/>
+	<link rel="stylesheet" th:href="@{/css/circlechart.css}"/>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12" style="margin-bottom: 15px;">
+<!--		Cyclic Dependency-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Cyclic Dependency</h4>
+			</div>
+			<div style="width: 100%">
+				<div class="form-group" style="width: 15%">
+					<label for="cyclicDependencyProject">Project: </label>
+					<select id="cyclicDependencyProject" class="projectSelect form-control">
+						<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+					</select>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="cyclicDependencyQuery" class="btn btn-default">Query</button>
+				<button id="cyclicDependencyDetect" class="btn btn-default">Re-detect</button>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+<!--		Hub-Like Dependency-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Hub-Like Dependency</h4>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="hubLikeDependencyProject">Project: </label>
+						<select id="hubLikeDependencyProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 50%; float: left">
+					<div class="form-group" style="width: 100%">
+						<label for="hubLikeMinFileFanIn">File-Level Fan In Threshold:</label>
+						<input class="form-control" placeholder="File-Level Fan In Threshold" id="hubLikeMinFileFanIn" type="number" style="width: 30%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="hubLikeMinFileFanOut" class="control-label">File-Level Fan Out Threshold:</label>
+						<input class="form-control" placeholder="File-Level Fan Out Threshold" id="hubLikeMinFileFanOut" type="number" style="width: 30%;"/>
+					</div>
+				</div>
+				<div style="width: 50%; float: right">
+					<div class="form-group" style="width: 100%">
+						<label for="hubLikeMinPackageFanIn">Package-Level Fan In Threshold:</label>
+						<input class="form-control" placeholder="Package-Level Fan In Threshold" id="hubLikeMinPackageFanIn" type="number" style="width: 30%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="hubLikeMinPackageFanOut">Package-Level Fan Out Threshold:</label>
+						<input class="form-control" placeholder="Package-Level Fan Out Threshold" id="hubLikeMinPackageFanOut" type="number" style="width: 30%;"/>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="hubLikeDependencyThresholdSave" class="btn btn-default">Save</button>
+			</div>
+			<div style="width: 100%">
+				<button id="hubLikeDependencyQuery" class="btn btn-default">Query</button>
+				<button id="hubLikeDependencyDetect" class="btn btn-default">Re-detect</button>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+<!--		Unstable Dependency-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Unstable Dependency</h4>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="unstableDependencyProject">Project: </label>
+						<select id="unstableDependencyProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 100%; float: right">
+					<div class="form-group" style="width: 100%">
+						<label for="unstableDependencyMinFileFanOut">File-Level All Outgoing Dependencies Threshold:</label>
+						<input id="unstableDependencyMinFileFanOut" type="number" class="form-control" style="width: 15%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="unstableDependencyCoChangeTimes">CoChange Times Threshold:</label>
+						<input id="unstableDependencyCoChangeTimes" type="number" class="form-control" style="width: 15%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="unstableDependencyMinRatio">Ratio(All CoChange Files / All Outgoing Dependencies) Threshold:</label>
+						<input id="unstableDependencyMinRatio" class="form-control" style="width: 15%;"/>
+					</div>
+					<div style="width: 100%">
+						<button id="unstableDependencyThresholdSave" class="btn btn-default">Save</button>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div class="" style="margin-top: 15px;">
+					<button id="unstableDependencyQuery" class="btn btn-default">Query</button>
+					<button id="unstableDependencyDetect" class="btn btn-default">Re-detect</button>
+				</div>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+		<!--		Unstable Interface-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Unstable Interface</h4>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="unstableInterfaceProject">Project: </label>
+						<select id="unstableInterfaceProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 100%; float: right">
+					<div class="form-group" style="width: 100%">
+						<label for="unstableInterfaceMinFileFanIn">File-Level All Ingoing Dependencies Threshold:</label>
+						<input id="unstableInterfaceMinFileFanIn" type="number" class="form-control" style="width: 15%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="unstableInterfaceCoChangeTimes">CoChange Times Threshold:</label>
+						<input id="unstableInterfaceCoChangeTimes" type="number" class="form-control" style="width: 15%;"/>
+					</div>
+					<div class="form-group" style="width: 100%">
+						<label for="unstableInterfaceMinRatio">Ratio(All CoChange Files / All Ingoing Dependencies) Threshold:</label>
+						<input id="unstableInterfaceMinRatio" class="form-control" style="width: 15%;"/>
+					</div>
+					<div style="width: 100%">
+						<button id="unstableInterfaceThresholdSave" class="btn btn-default">Save</button>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div class="" style="margin-top: 15px;">
+					<button id="unstableInterfaceQuery" class="btn btn-default">Query</button>
+					<button id="unstableInterfaceDetect" class="btn btn-default">Re-detect</button>
+				</div>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+<!--		Implicit Cross Module Dependency-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Implicit Cross Module Dependency</h4>
+			</div>
+			<div class="form" style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="implicitCrossModuleDependencyProject">Project: </label>
+						<select id="implicitCrossModuleDependencyProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<div style="width: 50%; float: left">
+					<div class="form-group" style="width: 100%">
+						<label for="icdMinFileCoChange">File-Level Co-Change Threshold:</label>
+						<input id="icdMinFileCoChange" type="number" class="form-control" value="20" style="width: 30%;"/>
+					</div>
+				</div>
+				<div style="width: 50%; float: right">
+					<div class="form-group" style="width: 100%">
+						<label for="icdMinPackageCoChange">Package-Level Co-Change Threshold:</label>
+						<input id="icdMinPackageCoChange" type="number" class="form-control" value="30" style="width: 30%;"/>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="implicitCrossModuleDependencyThresholdSave" class="btn btn-default">Save</button>
+			</div>
+			<div style="width: 100%">
+				<button id="implicitCrossModuleDependencyQuery" class="btn btn-default">Query</button>
+				<button id="implicitCrossModuleDependencyDetect" class="btn btn-default">Re-detect</button>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+<!--		Unutilized Abstraction-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Unutilized Abstraction</h4>
+			</div>
+			<div class="form" style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="unutilizedAbstractionProject">Project: </label>
+						<select id="unutilizedAbstractionProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="unutilizedAbstractionQuery" class="btn btn-default">Query</button>
+				<button id="unutilizedAbstractionDetect" class="btn btn-default">Re-detect</button>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+<!--		Unused Include-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Unused Include</h4>
+			</div>
+			<div class="form" style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="unusedIncludeProject">Project: </label>
+						<select id="unusedIncludeProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="unusedIncludeQuery" class="btn btn-default">Query</button>
+				<button id="unusedIncludeDetect" class="btn btn-default">Re-detect</button>
+				<button id="unusedIncludeExport" class="btn btn-default">Export</button>
+			</div>
+		</div>
+
+		<div style="width: 100%">
+			<hr/>
+		</div>
+
+		<!--		Multiple Smell-->
+		<div style="width: 100%">
+			<div style="width: 100%">
+				<h4>Multiple Smells</h4>
+			</div>
+			<div class="form" style="width: 100%">
+				<div style="width: 100%">
+					<div class="form-group" style="width: 15%">
+						<label for="multipleSmellProject">Project: </label>
+						<select id="multipleSmellProject" class="projectSelect form-control">
+							<option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name + ' (' + project.language + ')'}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%">
+				<button id="multipleSmellQuery" class="btn btn-default">Query</button>
+				<button id="multipleSmellDetect" class="btn btn-default">Re-detect</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+			smellDetect().init();
+			smellDetect().smellQuery();
+			smellDetect().smellDetect();
+			smellDetect().smellExport();
+		});
+		// ]]>
+	</script>
+</body>
+</html>

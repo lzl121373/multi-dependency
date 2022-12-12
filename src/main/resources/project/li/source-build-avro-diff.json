@@ -1,0 +1,47 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\program\\avro",
+		"includeDirs": [],
+		"microserviceName": "avro",
+		"autoInclude": true,
+		"serviceGroupName": "avro",
+		"project": "avro",
+		"language": "java",
+		"isMicroservice": true,
+		"tagPrefixes": [
+			"release-2"
+
+		],
+		"excludes": [
+		]
+	}],
+	"dynamics": {
+		"file_suffixes": [
+			""
+		],
+		"logs_path": "",
+		"features_path": ""
+	},
+	"gits": [{
+		"path": "D:\\program\\avro",
+		"project": "avro",
+		"specify_commit_range": true,
+		"specify_by_commit_id": false,
+		"commit_id_from": "",
+		"commit_id_to": "",
+		"commit_id_current": "",
+		"commit_time_since": "2021-04-06 00:00:00",
+		"commit_time_until": "2021-04-06 23:59:59",
+		"issueFrom": "",
+		"issues_directory": "",
+		"calculate_cochange": false,
+		"language": "java",
+		"for_tag": false,
+		"for_diff": true,
+		"CLDiff_output_dir": "D:\\data\\CLDIffdata",
+		"GitJson_output_dir": "D:\\data\\gitjsonData"
+	}],
+	"libs": [],
+	"clones": []
+}

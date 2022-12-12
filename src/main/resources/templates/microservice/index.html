@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>首页</title>
+<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/feature.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-treeview.min.js}"></script>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+<style type="text/css">
+.div_cytoscape_content {
+	height: 1000px;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12" style="margin-bottom: 15px;">
+		<h3>高层架构与实际运行</h3>
+		<button id="showImg" type="button" class="btn btn-default">保存图片</button>
+		<div id="graph" class="div_cytoscape_content"></div>	
+		<div><img id="png-eg" style="background-color: #ffffff;" /></div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		$(document).ready(function() {
+			var cy = null;
+			$.ajax({
+				type : "get",
+				url : "/microservice/cytoscape",
+				success : function(result) {
+					console.log(result);
+					cy = cytoscape({
+						layout: {
+							name: "dagre"
+						},
+						container: $("#graph"),
+						style: [
+				    		{
+				    			selector: 'node',
+				    			style: {
+				    				'shape' : 'rectangle',
+				    				'width': 'label',
+				    				'height': 30,
+				    				'text-valign': 'center',
+				    				'text-halign': 'center',
+				    				'border-width': 1.5,
+				    				'border-color': '#555',
+				    				'background-color': '#f6f6f6',
+									'content': 'data(name)'
+				    			}
+				    		},
+							{
+				    			selector: 'edge',
+				    			style: {
+				    				'curve-style': 'bezier',
+				    				'width': 1,
+				    				'line-color': 'black',
+				                    'target-arrow-shape': 'triangle',
+				                    'target-arrow-color': 'black'
+				    			}
+				    		},
+							{
+				    			selector: 'edge[type="call"]',
+				    			style: {
+				    				'curve-style': 'bezier',
+				    				'width': 1,
+				    				'line-color': 'red',
+				                    'target-arrow-shape': 'triangle',
+				                    'target-arrow-color': 'red',
+									'font-size' : 10,
+				    			}
+				    		},
+				    		{
+				    			selector: 'edge[type="dependon-call"]',
+				    			style: {
+				    				'curve-style': 'bezier',
+				    				'width': 1,
+				    				'line-color': 'green',
+				                    'target-arrow-shape': 'triangle',
+				                    'target-arrow-color': 'green',
+									'font-size' : 10,
+				    			}
+				    		}
+				    	],
+						elements: result.value
+					});
+				}
+			});			
+			$("#showImg").click(function() {
+				if(cy != null) {
+					$('#png-eg').attr('src', cy.png({
+						bg: "#ffffff",
+						full : true
+					}));
+					$('#png-eg').css("background-color", "#ffffff");
+				}
+			})
+		});
+		// ]]>
+	</script>
+</body>
+</html>

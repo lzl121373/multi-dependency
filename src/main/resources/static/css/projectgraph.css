@@ -1,0 +1,109 @@
+.circlepacking_node {
+    /*cursor: pointer;*/
+}
+
+.circlepacking_node:hover {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.circlepacking_node--leaf {
+    fill: white;
+}
+
+.circlepacking_label {
+    font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-anchor: middle;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.circlepacking_label,
+.circlepacking_node--root {
+    pointer-events: none;
+}
+
+path {
+    stroke-width: 3px;
+    cursor:pointer;
+}
+
+button {
+    /*margin-right: 50px;*/
+    /*margin-top: 50px;*/
+    color: black;
+    font-family:Arial;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+#projectToGraph {
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+#projectToGraph_util{
+    margin-left: 20px;
+}
+
+#AttributionSelect, #ProjectSelect{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#multipleProjectSelect{
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+#projectCloneTable{
+    padding: 20px;
+}
+
+.control-label{
+    padding: 6px;
+    text-align: center;
+}
+
+.div-inline{
+    margin-top: 15px;
+}
+
+.label{
+    font-size: 18px;
+}
+
+.AttributionSelectInput{
+    width:50px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.AttributionSelectTitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 100px;
+}
+
+.AttributionSelectLabel{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.AttributionSelectSingleSelect{
+    margin-left: 10px;
+    height: 25px;
+}

@@ -1,0 +1,51 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: 123456
+      uri: bolt://localhost:7687
+  thymeleaf:
+    cache: false 
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+   port: 8080
+
+data:
+   projects:
+      config: D:\git\multi-dependency\src\main\resources\project\train-ticket.json
+#      config: src/main/resources/project/depends.json
+   dynamic:
+      analyse: false
+      dynamic_file_suffix: [.log]
+      directory_root_path: src/main/resources/dynamic/javassist/train-ticket/logs
+#      directory_root_path: src/main/resources/dynamic/javassist/depends/logs
+      features_path: src/main/resources/features/train-ticket/features-javassist-v1.json
+#      features_path: src/main/resources/features/depends/features-javassist.json
+   git:
+      analyse: false
+      directory_root_path: D:/multiple-dependency-project/train-ticket
+#      directory_root_path: D:/multiple-dependency-project/depends
+      issues_path: src/main/resources/git/train-ticket-issues.json
+#      issues_path: src/main/resources/git/depends-issues.json
+      select_range: false
+      commit_id_from: 3ea128078eb0ec45f110a77ed151933339d0f626
+      commit_id_to: 5122684aff988277b8c50c26576b28bfffef3289a
+   lib:
+      analyse: false
+      libs_path: src/main/resources/lib/train-ticket_2020-04-27.json
+  #      libs_path: src/main/resources/lib/depends_2020-04-19.json
+   clone:
+      analyse: false
+      language: java
+      method_name_table_path: src/main/resources/clone/MethodNameTable.csv
+      method_result_path: src/main/resources/clone/type123_method_result.csv
+   build:   
+      analyse: false
+      directory_root_path: src/main/resources/build
+   neo4j:
+      delete: true
+      # batchInserter要插入的数据库
+      path: D:/neo4j-community-3.5.16/data/databases/multiple.dependency.db
+   
+   test: this property is for YamlUtilsTest

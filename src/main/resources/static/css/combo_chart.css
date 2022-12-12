@@ -1,0 +1,221 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /*background-color: rgb(243, 243, 243) !important;*/
+
+}
+
+#contextMenu {
+    position: absolute;
+    list-style-type: none;
+    padding: 10px 8px;
+    left: -150px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #545454;
+}
+#contextMenu li {
+    cursor: pointer;
+    list-style-type:none;
+    list-style: none;
+    margin-left: 0px;
+}
+#contextMenu li:hover {
+    color: #aaa;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.combo_label {
+    font-weight: bold;
+}
+
+#combo_util {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 20px;
+}
+
+.combo_div {
+    /*border: 2px solid black;*/
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#combo {
+    /*border: 2px solid black;*/
+    border-radius: 10px;
+}
+
+.combo_select {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.combo_title, .combo_information_title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 100px;
+}
+
+.combo_label, .combo_information_label{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.combo_information_title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 100px;
+}
+
+.combo_information_label{
+    width: 10%;
+}
+
+#AttributionSelect, #ProjectSelect{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.AttributionSelectInput{
+    width:50px;
+    height: 28px !important;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.AttributionSelectTitle{
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 100px;
+}
+
+.AttributionSelectLabel{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.AttributionSelectSingleSelect{
+    margin-left: 10px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*canvas区域背景颜色*/
+.overview_div{
+    /*width: 95% !important;*/
+    padding: 0 32px 30px;
+    background-color: rgb(230,230,230) !important ;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+}
+
+#combo_chart{
+    width: 100% !important ;
+    height: 100% !important;
+}
+
+#combo_chart > canvas {
+    width: 100% !important ;
+    height: 100% !important;
+    cursor: default;
+
+}
+
+/*.g6-component-contextmenu {*/
+/*    padding: 0;*/
+/*    position: absolute;*/
+/*    list-style-type: none;*/
+/*    left: -150px;*/
+/*    border: 1px solid #e2e2e2;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*.g6-component-contextmenu ul {*/
+/*    border-radius: 5px;*/
+/*    position: absolute;*/
+/*    float: left;*/
+/*    border: 1px solid #979797;*/
+/*    box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);*/
+/*    width: 230px;*/
+/*    overflow: auto;*/
+/*}*/
+
+.combo_li{
+    font-size: 15px;
+    padding-inline-start: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.combo_ul{
+    font-weight: bold;
+    font-size: 17px;
+    padding-inline-start: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.combo_a{
+    text-decoration:none;
+    color: #2272f1;
+}
+
+/*.g6-component-contextmenu .combo_li {*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    list-style: none;*/
+/*    margin-left: 0px;*/
+/*    float: left;*/
+/*    clear: both;*/
+/*    height: 24px;*/
+/*    line-height: 24px;*/
+/*    white-space: nowrap;*/
+/*    width: 100%;*/
+/*    display: inline-block;*/
+/*}*/
+.g6-component-contextmenu .combo_li:hover {
+    background:#E6EDF6;
+    border: 1px solid #B4D2F6;
+}
+
+.combo_button {
+    font-size: 13px; !important;
+    padding: 0 10px; !important;
+    border-radius: 4px; !important;
+    margin-right: 15px;
+}
+
+
+.combo_p {
+    margin-top: 10px;
+}
+
+.g6-toolbar-ul {
+    position: absolute;
+    top: 70px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #545454;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 8px;
+    box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+    width: 100px;
+    cursor: pointer;
+}

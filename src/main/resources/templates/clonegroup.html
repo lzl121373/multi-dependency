@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Clone</title>
+<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/jquery.treeview.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/jquery-1.12.0.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-hierarchical.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/layout-base-1.0.2.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cose-base-1.0.2.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-cose-bilkent-4.1.0.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-undo-red-1.3.3.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-expand-collapse.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/ztree/jquery.ztree.all.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/echarts-4.7.0/dist/echarts.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/d3.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/d3-hsv.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/windowUtil.js}"></script>
+<script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+<script type="text/javascript" th:src="@{/js/clonegroup.js}"></script>
+<script type="text/javascript" th:src="@{/js/clonecompareutils.js}"></script>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-panzoom.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-navigator.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/jquery.jqplot.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/ztree/zTreeStyle/zTreeStyle.css}"></link>
+<!--<link rel="stylesheet" th:href="@{/css/circlechart.css}"></link>-->
+<style type="text/css">
+.div_cytoscape_div{
+	background-color: #ffffff;
+}
+.div_cytoscape {
+	width: 83%;
+	height: 500px;
+	margin-bottom: 5px;
+}
+.div_cytoscape_content {
+	width: 100%;
+	height: 500px;
+	border: 1px solid #000;
+}
+.div_cytoscape_treeview {
+	padding: 5px;
+	width: 17%; 
+	float: left; 
+	display: inline; 
+	overflow: scroll;
+	border-left: 1px solid #000;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	height: 500px;
+}
+</style>	
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12 row" style="margin-bottom: 15px;">
+		<div class="col-sm-12 row">
+			<form role="form">
+				<div class="form-group row col-sm-12">
+					<div class="col-sm-12">
+						<label>克隆关系类型</label>
+						<div>
+							<select id="searchCloneRelationTypeSelect" name="searchCloneRelationTypeSelect" class="multiselect form-control" multiple="multiple">
+								<option th:each="cloneRelationType : ${cloneLevels}" th:value="${cloneRelationType}" th:text="${cloneRelationType}">
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-12" style="margin-top: 10px;">
+						<label>语言</label>
+						<div>
+							<label class="checkbox-inline">
+						        <input type="checkbox" id="languageJava" name="language" value="java"> java
+						    </label>
+						    <label class="checkbox-inline">
+						        <input type="checkbox" id="languageCpp" name="language" value="cpp"> cpp
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-12" style="margin-top: 10px;">
+						<label>过滤</label>
+						<div>
+							<label class="checkbox-inline">
+						        <input type="checkbox" id="dataclass" name="filter" value="dataclass"> 数据类
+						    </label>
+						    <label class="checkbox-inline">
+						        <input type="checkbox" id="fileclone" name="filter" value="fileclone"> 文件间已有克隆关系
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-12" style="margin-top: 10px;">
+						<button id="searchCloneRelationType" type="button" class="btn btn-default">搜索</button>
+					</div>
+				</div>
+			</form>
+			<hr/>
+		</div>
+		<div class="col-sm-12 row">
+			<div class="col-sm-12">
+				<h5>克隆组数：<span id="histogram_group_count"></span></h5>
+			</div>
+			<div class="col-sm-12">
+				<button id="histogram_sort_nodes">按克隆组内节点数排序</button>
+				<button id="histogram_sort_projects">按克隆组跨项目数排序</button>
+			</div>
+			<div class="col-sm-12">
+				<div id="main" style="width: 100%;height:400px;"></div>
+			</div>
+			<hr/>
+		</div>
+		<div id="specifiedCytoscape">
+		</div>
+		<div class="col-sm-12 row" style="margin-top: 15px;">
+			<div class="col-sm-12">
+				<button id="projects_size_histogram_sort_nodes">按节点数排序</button>			
+				<button id="projects_size_histogram_sort_groups">按组数排序</button>			
+				<button id="projects_size_histogram_sort_ratio">按节点数/组数排序</button>			
+			</div>
+			<div class="col-sm-12">
+				<div id="projects_size_histogram" style="width: 100%;height:400px;"></div>
+			</div>
+			<hr/>
+		</div>
+		<div class="col-sm-12" style="margin-top: 15px;">
+<!--			<i id="table_wait">查询中...</i>-->
+<!--			<div id="table_div">-->
+<!--				<table class="table table-bordered" id="table">-->
+<!--				</table>-->
+<!--			</div>-->
+<!--			<hr/>-->
+			<button id="export" type="button" class="btn btn-default">导出</button>
+		</div>
+		<div class="col-sm-12 row">
+			<div class="col-sm-6">
+				<div class="col-sm-12 row" >
+					<form role="form" >
+						<div class="form-group row col-sm-12">
+							<div class="col-sm-6" id="searchGroupsDiv">
+								<label>克隆组：
+									<select id="searchGroups" class="multiselect" multiple="multiple">
+									</select>
+								</label>
+							</div>
+							<div class="col-sm-6">
+									<button id="searchSelected" type="button" class="btn btn-default">搜索</button>
+							</div>
+						</div>
+					</form>
+					<form role="form" >
+						<div class="form-group row col-sm-12">
+							<div class="col-sm-6">
+								<label>跨项目数(? / <span id="projectsCount"></span>)
+								</label> 
+									<br/>&gt;=
+									<input class="" type="number"  id="minCountProjectsInput" /> 
+									<br/>&lt;=
+									<input class="" type="number"  id="maxCountProjectsInput" />
+							</div>
+							<div class="col-sm-6">
+								<button id="searchCountOfProjects" type="button" class="btn btn-default">搜索</button>
+							</div>
+						</div>
+					</form>
+					<form role="form" >
+						<div class="form-group row col-sm-12">
+							<div class="col-sm-6" id="searchProjectsSelectDiv">
+								<label>克隆组包含项目：
+									<select id="searchProjectsSelect" class="multiselect" name="searchProjectsSelect" multiple="multiple">
+									</select>
+								</label> 
+							</div>
+							<div class="col-sm-6">
+								<button id="searchProjects" type="button" class="btn btn-default">搜索</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12" id="groupCytoscape">
+		</div>
+		<div class="col-sm-12" id="groupCytoscape2">
+		</div>
+		<div class="col-sm-12">
+			<div id="content">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+			clone(cytoscapeutil()).init();		
+		});
+		// ]]>
+	</script>
+<!--	<script type="text/javascript" th:src="@{/js/circlechart.js}"></script>-->
+</body>
+</html>

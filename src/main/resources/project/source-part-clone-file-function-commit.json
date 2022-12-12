@@ -1,0 +1,175 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\sourceCode\\source-part\\hadoop",
+		"includeDirs": [],
+		"microserviceName": "hadoop",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "hadoop",
+		"language": "java",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	},{
+		"path": "D:\\sourceCode\\source-part\\hadoop",
+		"includeDirs": [],
+		"microserviceName": "hadoop",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "hadoop",
+		"language": "cpp",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	},{
+		"path": "D:\\sourceCode\\source-part\\guava",
+		"includeDirs": [],
+		"microserviceName": "guava",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "guava",
+		"language": "java",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	}, {
+		"path": "D:\\sourceCode\\source-part\\tomcat",
+		"includeDirs": [],
+		"microserviceName": "tomcat",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "tomcat",
+		"language": "java",
+		"isMicroservice": true,
+		"excludes": [		
+		]
+	},{
+		"path": "D:\\sourceCode\\source-part\\cppcheck",
+		"includeDirs": [],
+		"microserviceName": "cppcheck",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "cppcheck",
+		"language": "cpp",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	},{
+		"path": "D:\\sourceCode\\source-part\\nginx",
+		"includeDirs": [],
+		"microserviceName": "nginx",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "nginx",
+		"language": "cpp",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	},{
+		"path": "D:\\sourceCode\\source-part\\sqlite",
+		"includeDirs": [],
+		"microserviceName": "sqlite",
+		"autoInclude": true,
+		"serviceGroupName": "source-part",
+		"project": "sqlite",
+		"language": "cpp",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	}],
+	"dynamics": {
+		"file_suffixes": [
+			""
+		],
+		"logs_path": "",
+		"features_path": ""
+	},
+	"gits": [{
+		"path": "D:\\sourceCode\\source-part\\hadoop",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "1af87df242c4286474961078d306a5692f85debc",
+		"commit_id_to": "cc71d50b219c1cc682b4185ea739b485e519501f",
+		"commit_time_since": "2018-07-15 08:37:56",
+		"commit_time_until": "2020-07-18 05:18:36",
+		"issues_path": "",
+		"calculate_cochange": false
+	},{
+		"path": "D:\\sourceCode\\source-part\\guava",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "a91e6f2f18e7b5a9e72d4d782e11a111729112fb",
+		"commit_id_to": "6410f18c06074e75effb7823c97df98385f822d0",
+		"commit_time_since": "2018-07-18 00:00:00",
+		"commit_time_until": "2020-07-18 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	},{
+		"path": "D:\\sourceCode\\source-part\\tomcat",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "daa00a49f8358110097387881bc7405012036c02",
+		"commit_id_to": "d8aae3ac3ae991d5d4e7bd052b9ddfd7ab335255",
+		"commit_time_since": "2018-07-18 00:00:00",
+		"commit_time_until": "2020-07-18 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	},{
+		"path": "D:\\sourceCode\\source-part\\cppcheck",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "0b308dd0957861cf7fdab67cc00ad8669c5995cd",
+		"commit_id_to": "e9281babc498e7fd3bcd19a9f418637a9a399634",
+		"commit_time_since": "2019-07-18 00:00:00",
+		"commit_time_until": "2020-07-18 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	},{
+		"path": "D:\\sourceCode\\source-part\\nginx",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "c540e32a0724e2a660cd31b3efef8aa4321ef3c2",
+		"commit_id_to": "5cef7de7a116bab3af9097dac5a22f7652be4273",
+		"commit_time_since": "2018-07-18 00:00:00",
+		"commit_time_until": "2020-07-18 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	},{
+		"path": "D:\\sourceCode\\source-part\\sqlite",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "77f3f402921986383b2ff928d4c3471c1d5ca886",
+		"commit_id_to": "51da8daf822a8c27fd2f4646c4c19d8ed23a7e73",
+		"commit_time_since": "2018-07-18 00:00:00",
+		"commit_time_until": "2020-07-18 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	}],
+	"libs": [],
+	"clones": [{
+		"language": "java",
+		"granularity": "file",
+		"name_path": "src/main/resources/clone/file/source-part-zhou/java/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/source-part-zhou/java/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-part-zhou/java/result/type123_method_group_result.csv"
+	},{
+		"language": "java",
+		"granularity": "function",
+		"name_path": "src/main/resources/clone/function/source-part-zhou/java/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/function/source-part-zhou/java/similarity.csv",
+		"group_path" : "src/main/resources/clone/function/source-part-zhou/java/result/type123_method_group_result.csv"
+	},{
+		"language": "cpp",
+		"granularity": "file",
+		"name_path": "src/main/resources/clone/file/source-part-zhou/cpp/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/source-part-zhou/cpp/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-part-zhou/cpp/result/type123_method_group_result.csv"
+	},{
+		"language": "cpp",
+		"granularity": "function",
+		"name_path": "src/main/resources/clone/function/source-part-zhou/cpp/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/function/source-part-zhou/cpp/similarity.csv",
+		"group_path" : "src/main/resources/clone/function/source-part-zhou/cpp/result/type123_method_group_result.csv"
+	}]
+}

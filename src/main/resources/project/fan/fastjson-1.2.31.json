@@ -1,0 +1,26 @@
+{
+	"projects": [{
+		"path": "D:\\git\\article\\fastjson-1.2.31",
+		"language": "java"
+	}],
+	"gits": [{
+		"path": "D:\\git\\article\\fastjson-1.2.31",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "3339419d999830665bd7c73b8df561d12cf92772",
+		"commit_id_to" : "03d77b6e629b6ff825a1c8cc3f7cbba7feb98395",
+		"commit_id_current" : "1a8496e531c6a6dadba37ece5bcc4e55ec07ae81",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}],
+ 	"clones": [{
+ 		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "D:\\git\\multi-dependency\\src\\main\\resources\\clone\\file\\fastjson\\version\\1.2.31\\result\\MeasureIndex.csv",
+		"result_path": "D:\\git\\multi-dependency\\src\\main\\resources\\clone\\file\\fastjson\\version\\1.2.31\\similarity.csv",
+		"group_path" : "D:\\git\\multi-dependency\\src\\main\\resources\\clone\\file\\fastjson\\version\\1.2.31\\result\\type123_method_group_result.csv"
+	}],
+	"dynamics": {
+	},
+	"architectures": {},
+	"libs": []
+}

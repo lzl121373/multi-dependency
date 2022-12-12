@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\SmellPattern",
+      "includeDirs": [],
+      "microserviceName": "SmellPattern",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "SmellPattern",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\square__fdse__retrofit",
+      "includeDirs": [],
+      "microserviceName": "square__fdse__retrofit",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "square__fdse__retrofit",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\alibaba__fdse__dubbo",
+      "includeDirs": [],
+      "microserviceName": "alibaba__fdse__dubbo",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "alibaba__fdse__dubbo",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\google__fdse__guava",
+      "includeDirs": [],
+      "microserviceName": "google__fdse__guava",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "google__fdse__guava",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\iluwatar__fdse__java-design-patterns",
+      "includeDirs": [],
+      "microserviceName": "iluwatar__fdse__java-design-patterns",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "iluwatar__fdse__java-design-patterns",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\netty__fdse__netty",
+      "includeDirs": [],
+      "microserviceName": "netty__fdse__netty",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "netty__fdse__netty",
+      "language": "java",
+      "isMicroservice": true
+    },
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\projects\\source\\square__fdse__okhttp",
+      "includeDirs": [],
+      "microserviceName": "square__fdse__okhttp",
+      "autoInclude": true,
+      "serviceGroupName": "source",
+      "project": "square__fdse__okhttp",
+      "language": "java",
+      "isMicroservice": true
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+  },
+  "gits": [
+  ],
+  "libs": [
+  ],
+  "clones": [
+  ]
+}

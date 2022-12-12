@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "path": "D:\\my_data\\Dissertation\\jhotdraw-git\\JHotDraw",
+      "project": "jhotdraw",
+      "language": "java",
+      "isMicroservice": false,
+      "excludes": [
+        "D:\\my_data\\Dissertation\\jhotdraw-git\\JHotDraw\\src\\CH\\ifa\\draw\\test"
+      ]
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+    "file_suffixes": [
+      ".log"
+    ],
+    "logs_path": "D:\\log",
+    "features_path": ""
+  },
+  "gits": [
+    {
+      "path": "D:\\my_data\\Dissertation\\jhotdraw-git",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2000-10-10 00:00:00",
+      "commit_time_until": "2005-04-27 00:00:00",
+      "issues_path": "",
+      "calculate_cochange": true
+    }
+  ],
+  "libs": [
+  ],
+  "clones": [
+  ]
+}

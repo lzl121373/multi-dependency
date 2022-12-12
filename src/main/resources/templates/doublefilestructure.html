@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Type</title>
+    <script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/jquery.treeview.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+    <script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/ztree/jquery.ztree.all.js}"></script>
+    <script type="text/javascript" th:src="@{/js/doublefile.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/import/ztree/zTreeStyle/zTreeStyle.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/doublefile_tree.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/table_common.css}"></link>
+<body>
+<style>ul{list-style-type:none;margin:5px;}</style>
+<div th:include="nav.html::nav"></div>
+<div class="col-sm-12 row" style="margin-bottom: 15px;">
+    <div class = "col-sm-12" id = "file_table"></div>
+    <div class = "col-sm-12">
+        <table  class = "table table-bordered">
+            <tr><th>depends</th><th id="file1"></th><th id="file2"></th></tr>
+            <tr><th rowspan="2" style="vertical-align: middle">dependsOn</th><td id="file1DependsOn"></td><td id="file2DependsOn"></td></tr>
+            <tr><td id="commonDependsOn" colspan="2" ></td></tr>
+            <tr><th rowspan="2" style="vertical-align: middle">dependedBy</th><td id="file1DependedBy"></td><td id="file2DependedBy"></td></tr>
+            <tr><td id="commonDependedBy" colspan="2" ></td></tr>
+        </table>
+    </div>
+    <div class="div_file_all" style="margin-bottom: 15px;">
+        <div class = "div_file1">
+            <ul id="tree_file1" class="ztree"></ul>
+        </div>
+        <div class="div_file2">
+            <ul id="tree_file2" class="ztree"></ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function() {
+        var file1Id = [[${file1Id}]];
+        var file2Id = [[${file2Id}]];
+        var URL = window.location.search;
+        URL = URL.split('?')[1]; //获取参数列表
+        var params = URL.split('&');
+        var cloneType = params[2].split('=')[1];
+        var linesSize1 = [[${linesSize1}]];
+        var linesSize2 = [[${linesSize2}]];
+        var loc1 = [[${loc1}]];
+        var loc2 = [[${loc2}]];
+        var value = [[${value}]];
+        var cochange = [[${cochange}]];
+        var filePath1 = params[9].split('=')[1];
+        var filePath2 = params[10].split('=')[1];
+        var cochangeId = [[${cochangeId}]];
+        doublefile().init(file1Id,file2Id,cloneType,linesSize1,linesSize2,loc1,loc2,value,cochange,filePath1,filePath2,cochangeId);
+    });
+    // ]]>
+</script>
+</body>
+</html>

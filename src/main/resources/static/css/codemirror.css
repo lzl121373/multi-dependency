@@ -1,0 +1,126 @@
+.mergely-column textarea {
+    width:80px;
+    height:200px;
+}
+
+.mergely-column {
+}
+
+.mergely-column {
+    float:left;
+}
+
+.mergely-margin {
+}
+
+.mergely-margin {
+    float:left;
+}
+
+.mergely-canvas {
+    float:left;
+    width:28px;
+}
+
+.mergely-resizer {
+    width:100%;
+    height:100%;
+}
+
+.mergely-column {
+    border:1px solid #4A4A4A
+}
+
+.mergely-active {
+    border:1px solid #a3d1ff;
+}
+
+.mergely.a,.mergely.d,.mergely.c {
+    color:#000;
+}
+
+.mergely.a.rhs.start {
+    border-top:2px solid rgba(50, 50, 255, 0.5);
+}
+
+.mergely.a.lhs.start.end,.mergely.a.rhs.end {
+    border-bottom:2px solid rgba(50, 50, 255, 0.5);
+}
+
+.mergely.a.rhs {
+    background-color:rgba(50, 50, 255, 0.2);
+}
+
+.mergely.a.lhs.start.end.first {
+    border-bottom:0;
+    border-top:2px solid rgba(50, 50, 255, 0.5);
+}
+
+.mergely.d.lhs {
+    background-color:rgba(255, 50, 50, 0.2);
+}
+
+.mergely.d.lhs.end,.mergely.d.rhs.start.end {
+    border-bottom:2px solid rgba(255, 50, 50, 0.5);
+}
+
+.mergely.d.rhs.start.end.first {
+    border-bottom:0;
+    border-top:2px solid rgba(255, 50, 50, 0.5);
+}
+
+.mergely.d.lhs.start {
+    border-top:2px solid rgba(255, 50, 50, 0.5);
+}
+
+.mergely.c.lhs {
+    background-color:rgba(255, 50, 50, 0.2);
+}
+
+.mergely.c.rhs {
+    background-color:rgba(50, 50, 255, 0.2);
+}
+
+.mergely.c.lhs.start,.mergely.c.rhs.start {
+
+}
+
+.mergely.c.lhs.end,.mergely.c.rhs.end {
+
+}
+
+.mergely.ch.d.lhs {
+    background-color:rgba(255, 50, 50, 0.5);
+    color:#C6C6C6;
+    border-radius:5px;
+    font-weight:400;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.mergely.ch.a.rhs {
+    background-color:rgba(50, 50, 255, 0.5);
+    color:#C6C6C6;
+    border-radius:5px;
+    font-weight:400;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.mergely.current.lhs.a.start.end,.mergely.current.rhs.d.start.end {
+    border-top:0 !important;
+}
+
+.mergely.current.CodeMirror-linenumber {
+    color:#F9F9F9;
+    font-weight:bold;
+    background-color:#777;
+}
+
+.CodeMirror-linenumber {
+    cursor:pointer;
+}
+
+.CodeMirror-code {
+    color:#C6C6C6;
+}

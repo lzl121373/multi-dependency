@@ -1,0 +1,639 @@
+{
+	"features" : [
+		{
+			"id" : 0,
+			"name" : "查询车票",
+			"description" : "能够根据输入查询所需车票"
+		},
+		{
+			"id" : 1,
+			"name" : "订票",
+			"description" : "能够订购查询的车票"
+		},
+		{
+			"id" : 2,
+			"name" : "查询所有保险",
+			"description" : "能够查询所有保险"
+		},
+		{
+			"id" : 3,
+			"name" : "查询所有餐品",
+			"description" : "能够查询所有餐品"
+		},
+		{
+			"id" : 4,
+			"name" : "查询账户所有联系方式",
+			"description" : "用户能够查询联系方式"
+		},
+		{
+			"id" : 5,
+			"name" : "添加联系方式",
+			"description" : "添加账户联系方式"
+		},
+		{
+			"id" : 6,
+			"name" : "登录",
+			"description" : "输入用户名、密码等，无误后能够使用系统"
+		},
+		{
+			"id" : 7,
+			"name" : "获取验证码",
+			"description" : "获取验证码"
+		},
+		{
+			"id" : 8,
+			"name" : "付款",
+			"description" : "支付所订票的款项"
+		},
+		{
+			"id" : 9,
+			"name" : "添加Consign",
+			"description" : "Consign"
+		},
+		{
+			"id" : 10,
+			"name" : "查看订票列表",
+			"description" : "管理员查看订票列表"
+		},
+		{
+			"id" : 11,
+			"name" : "添加订票",
+			"description" : "管理员添加订票"
+		},
+		{
+			"id" : 12,
+			"name" : "修改订票",
+			"description" : "管理员修改订票"
+		},
+		{
+			"id" : 13,
+			"name" : "删除订票",
+			"description" : "管理员删除订票"
+		},
+		{
+			"id" : 14,
+			"name" : "查看路线列表",
+			"description" : "管理员查看路线列表"
+		},
+		{
+			"id" : 15,
+			"name" : "添加路线",
+			"description" : "管理员添加路线"
+		},
+		{
+			"id" : 16,
+			"name" : "修改路线",
+			"description" : "管理员修改路线"
+		},
+		{
+			"id" : 17,
+			"name" : "删除路线",
+			"description" : "管理员删除路线"
+		},
+		{
+			"id" : 18,
+			"name" : "根据TrainType-GaoTie DongChe查票",
+			"description" : "根据TrainType-GaoTie DongChe查票",
+			"parentId" : 0
+		},
+		{
+			"id" : 19,
+			"name" : "根据TrainType-Other查票",
+			"description" : "根据TrainType-Other查票",
+			"parentId" : 0
+		},
+		{
+			"id" : 20,
+			"name" : "根据SearchType-Minimum Station Number查票",
+			"description" : "根据SearchType-Minimum Station Number查票",
+			"parentId" : 0
+		},
+		{
+			"id" : 21,
+			"name" : "根据SearchType-Cheapest查票",
+			"description" : "SearchType-Cheapest查票",
+			"parentId" : 0
+		},
+		{
+			"id" : 22,
+			"name" : "根据SearchType-Quickest查票",
+			"description" : "根据SearchType-Quickest查票",
+			"parentId" : 0
+		}
+	],
+	"testcases" : [
+		{
+			"id" : 0,
+			"name" : "查票-00",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "GaoTie Dongche"
+			},
+			"success" : true,
+			"features" : [
+				18
+			],
+			"traces" : [
+				"be321691-1521-4b93-9a82-7732ac6cb774"
+			],
+			"description" : "该方式应能查到票"
+		},
+		{
+			"id" : 1,
+			"group" : "查票",
+			"name" : "查票-01",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "Other"
+			},
+			"success" : true,
+			"features" : [
+				19
+			],
+			"traces" : [
+				"33b92cc2-4692-4526-ad2b-7daee18ef2cd"
+			],
+			"description" : "该方式应能查到票"
+		},
+		{
+			"id" : 2,
+			"name" : "查票-02",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "All"
+			},
+			"success" : true,
+			"features" : [
+				18, 19
+			],
+			"traces" : [
+				"ee877a92-161a-4057-8b57-8763d8d3c838",
+				"cef35451-7428-48be-8e0d-84c17f49ba7e"
+			],
+			"description" : "该方式应能查到票"
+		},
+		{
+			"id" : 3,
+			"name" : "查票-03",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "GaoTie Dongche"
+			},
+			"success" : true,
+			"features" : [
+				18
+			],
+			"traces" : [
+				"88d4cfea-e742-4159-906f-3a4d3a259e02"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 4,
+			"name" : "查票-04",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "Other"
+			},
+			"success" : true,
+			"features" : [
+				19
+			],
+			"traces" : [
+				"2134bdb8-cc9d-4f11-962a-a91f63878797"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 5,
+			"name" : "查票-05",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "All"
+			},
+			"success" : true,
+			"features" : [
+				18, 19
+			],
+			"traces" : [
+				"314aa9d0-0a58-442d-916b-f78683da1fe7",
+				"f4cd2ada-eef9-40bf-8457-2e2a5af7cebe"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 6,
+			"name" : "订票-00",
+			"group" : "订票",
+			"description" : "运行查票-00后，点击Booking订票，默认联系方式，不需要保险、餐品和托运",
+			"input" : {
+				"Trip Id" : "G1234",
+				"Select Seat" : "1st - 250.0",
+				"Select Contacts" : "No. 0",
+				"Assurance" : "No Assurance",
+				"Need Food" : false,
+				"Consign" : false
+			},
+			"success" : true,
+			"features" : [
+				1, 2, 3, 4
+			],
+			"traces" : [
+				"8705abb6-ff9d-4e06-b676-0891644f4bd7",
+				"8fd89f20-429c-47aa-84bf-cce28c70398a",
+				"40b87c0d-7d06-4e7c-8b19-bd10001114ae",
+				"91b5ca6b-aee2-466e-931b-284729c79058"
+			]
+		},
+		{
+			"id" : 7,
+			"name" : "订票-01",
+			"group" : "订票",
+			"description" : "运行查票-00后，点击Booking订票，添加联系方式，需要餐品，需要托运。",
+			"input" : {
+				"Trip Id" : "G1234",
+				"Select Seat" : "1st - 250.0",
+				"Select Contacts" : {
+					"No." : "2",
+					"Name" : "Contacts_Three",
+					"Document Type" : "Passport",
+					"Document Number" : "DocumentNumber_Three",
+					"Phone Number" : "ContactsPhoneNum_One"
+				},
+				"Assurance" : "Traffic Accident Assurance 3",
+				"Need Food" : {
+					"Train Food" : "Egg Soup:$3.2"
+				},
+				"Consign" : {
+					"Consignee" : "Consignee_One",
+					"Phone" : "Phone_One",
+					"Weight" : "60"
+				}
+			},
+			"success" : true,
+			"features" : [
+				1, 2, 3, 4, 5, 9
+			],
+			"traces" : [
+				"5abbfe4d-ddb8-4f64-a6e0-f21128911e75",
+				"77f356fc-4f76-4741-b40a-be4130d013d3",
+				"54bf726c-3e00-45bd-a611-95dc28c75d60",
+				"0927b0d3-241a-4f32-a3f0-575abc09a023",
+				"84399349-a4dd-443c-b7b7-d8b845b697b1",
+				"6749da31-adfa-4cb5-b495-4b3e9d695d0c"
+			]
+		},
+		{
+			"id" : 8,
+			"name" : "付款-00",
+			"description" : "运行订票-01后，在查看订票页面，点击“pay”支付票钱",
+			"input" : {
+				"Select Seat" : "1st - 50.0",
+				"Select Contacts" : {
+					"No." : "2",
+					"Name" : "Contacts_Three",
+					"Document Type" : "Passport",
+					"Document Number" : "DocumentNumber_Three",
+					"Phone Number" : "ContactsPhoneNum_One"
+				},
+				"Assurance" : "Traffic Accident Assurance 3",
+				"Need Food" : {
+					"Train Food" : "Egg Soup:$3.2"
+				},
+				"Consign" : {
+					"Consignee" : "Consignee_One",
+					"Phone" : "Phone_One",
+					"Weight" : "60"
+				}
+			},
+			"success" : true,
+			"features" : [
+				8
+			],
+			"traces" : [
+				"47842509-158c-47e5-b865-250a50b17624"
+			]
+		},
+		{
+			"id" : 9,
+			"name" : "查票-06",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Minimum Station Number"
+			},
+			"success" : true,
+			"features" : [
+				20
+			],
+			"traces" : [
+				"94e22c59-cf75-4b09-9a90-e076fc9f1ca3"
+			],
+			"description" : "该方式查到的票按最小站数排序"
+		},
+		{
+			"id" : 10,
+			"name" : "查票-07",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Cheapest"
+			},
+			"success" : true,
+			"features" : [
+				21
+			],
+			"traces" : [
+				"5549f2d8-56e6-486d-8fd7-34265a68bb65"
+			],
+			"description" : "该方式查到的票按价格排序"
+		},
+		{
+			"id" : 11,
+			"group" : "查票",
+			"name" : "查票-08",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Quickest"
+			},
+			"success" : true,
+			"features" : [
+				22
+			],
+			"traces" : [
+				"08699c71-c2ba-4af3-aba7-050a423bb0b6"
+			],
+			"description" : "该方式查到的票按经过多长时间排序"
+		},
+		{
+			"id" : 12,
+			"name" : "登录-00",
+			"group" : "登录",
+			"input" : {
+				"UserName" : "fdse_microservice",
+				"Password" : "",
+				"Verification Code" : "T2LS"
+			},
+			"success" : true,
+			"features" : [
+				6, 7
+			],
+			"traces" : [
+				"99d99970-60b8-47fa-8ec2-6d92139e0fec",
+				"fd407adc-a7db-4cae-94d0-d155ad8065b1"
+			],
+			"description" : "用户登录"
+		},
+		{
+			"id" : 13,
+			"name" : "登录-01",
+			"group" : "登录",
+			"input" : {
+				"" : "admin",
+				"" : ""
+			},
+			"success" : true,
+			"features" : [
+				6
+			],
+			"traces" : [
+				"108314a4-eb31-4105-a6a2-88a6488565dc"
+			],
+			"description" : "管理员登录"
+		},
+		{
+			"id" : 14,
+			"name" : "查看订票列表-00",
+			"input" : "进入Order页面",
+			"success" : true,
+			"features" : [
+				10
+			],
+			"traces" : [
+				"49987761-2488-4a8c-90e5-2780627ea4a5"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 15,
+			"name" : "添加订票-00",
+			"input" : {
+				"Bought Date":"1583678462998",
+				"Travel Date":"1501257600000",
+				"Travel Time":"1367629320000",
+				"Account":"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+				"Passenger":"Contacts_Two",
+				"Document Type":"2",
+				"Document Number":"DocumentNumber_Two",
+				"Train Number":"G1237",
+				"Coach Number":"5",
+				"Seat Class":"2",
+				"Seat Number":"FirstClass-30",
+				"From":"nanjing",
+				"To":"shanghaihongqiao",
+				"Status":"0",
+				"Price":"200.0"
+			},
+			"success" : true,
+			"features" : [
+				11
+			],
+			"traces" : [
+				"d79074f9-2884-40f8-8f60-61abd70206d9"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 16,
+			"name" : "修改订票-00",
+			"input" : {
+				"Order Id" : "ce3431d9-925c-4945-aae5-53a0a1392d78",
+				"Passenger":"Contacts_Three",
+				"Document Type":"1",
+				"Document Number":"DocumentNumber_Three",
+				"Status":"1",
+				"Price":"140.0"
+			},
+			"success" : true,
+			"features" : [
+				12
+			],
+			"traces" : [
+				"b23e1f1a-7099-4ee3-a7ce-c7afcef1330f"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 17,
+			"name" : "删除订票-00",
+			"input" : {
+				"Order Id" : "ce3431d9-925c-4945-aae5-53a0a1392d78"
+			},
+			"success" : true,
+			"features" : [
+				13
+			],
+			"traces" : [
+				"20ef105b-53db-4331-bf48-65cfc404cf0e"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 18,
+			"name" : "查看路线列表-00",
+			"input" : "进入路线列表页面",
+			"success" : true,
+			"features" : [
+				14
+			],
+			"traces" : [
+				"d3d217a4-5a03-47d4-969e-544624b36fe4"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 19,
+			"name" : "添加路线-00",
+			"input" : {
+				"Stations":"[\"yingtan\",\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"]",
+				"Distances":"[0,400,350,1000,1300]",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				15
+			],
+			"traces" : [
+				"10de6104-46f0-46f7-a5bd-dd65509778fc"
+			],
+			"description" : "输入错误格式的数据，不应添加成功"
+		},
+		{
+			"id" : 20,
+			"name" : "添加路线-01",
+			"input" : {
+				"Stations":"[\"yingtan\",\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"]",
+				"Distances":"[0,200,350,1000,1300]",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				15
+			],
+			"traces" : [
+				"65a76e36-68e3-42a4-b8d6-1953530ed038"
+			],
+			"description" : "输入错误格式的数据，不应添加成功"
+		},
+		{
+			"id" : 21,
+			"name" : "添加路线-02",
+			"input" : {
+				"Stations":"yingtan,shanghai,nanjing,shijiazhuang,taiyuan",
+				"Distances":"0,200,350,1000,1300",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				15
+			],
+			"traces" : [
+				"fd5b3c6c-12c7-44c6-8165-0f9eddf259a0"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 22,
+			"name" : "修改路线-00",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04",
+				"Stations":"shanghai,nanjing,shijiazhuang,taiyuan->nanjing,shijiazhuang,taiyuan,yingtan",
+				"Distances":"0,350,1000,1300",
+				"Start Station":"shanghai",
+				"Terminal Station": "nanjing"
+			},
+			"success" : false,
+			"features" : [
+				16
+			],
+			"traces" : [
+				"e3260bf6-5d39-46c3-9b8e-83e8f6290434"
+			],
+			"description" : "改路线，不改起止地点，应不能修改成功，结果修改成功了"
+		},
+		{
+			"id" : 23,
+			"name" : "修改路线-01",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04",
+				"Stations":"shanghai,nanjing,shijiazhuang,taiyuan->nanjing,shijiazhuang,taiyuan,yingtan",
+				"Distances":"0,350,1000,1300->0,500,1100,1400",
+				"Start Station":"shanghai->nanjing",
+				"Terminal Station": "nanjing->yingtan"
+			},
+			"success" : true,
+			"features" : [
+				16
+			],
+			"traces" : [
+				"fa39c87b-e33f-42b7-93ca-aa4abc6f1c79"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 24,
+			"name" : "删除路线-00",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04"
+			},
+			"success" : true,
+			"features" : [
+				17
+			],
+			"traces" : [
+				"e6782a3f-eb5b-4ac4-87ba-ec8033ab46cb"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 25,
+			"name" : "查看联系方式-00",
+			"input" : "页面查看",
+			"success" : true,
+			"features" : [
+				4
+			],
+			"traces" : [
+				"6b7075be-a2e9-46f3-b82c-0f4af651f5c2"
+			],
+			"description" : "管理员查看所有用户的联系方式"
+		}
+		
+	]
+}

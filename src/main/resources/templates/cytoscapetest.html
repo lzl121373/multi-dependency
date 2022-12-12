@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>首页</title>
+<script type="text/javascript" src="../static/js/import/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../static/js/import/jquery.treeview.js"></script>
+<script type="text/javascript" src="../static/js/import/popper-1.14.7.min.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape.min.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/dagre.min.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/klay.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape-klay.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/cytoscape-hierarchical.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/expand-collapse/layout-base-1.0.2.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/expand-collapse/cose-base-1.0.2.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-cose-bilkent-4.1.0.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-undo-red-1.3.3.js"></script>
+<script type="text/javascript" src="../static/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-expand-collapse.js"></script>
+<script type="text/javascript" src="../static/js/import/bootstrap/bootstrap-3.3.2.min.js"></script>
+<script type="text/javascript" src="../static/js/import/bootstrap/bootstrap-multiselect-0.9.15.js"></script>
+<script type="text/javascript" src="../static/js/cytoscapeutils.js"></script>
+<script type="text/javascript" src="../static/js/cytoscapetest.js"></script>
+<link rel="stylesheet" href="../static/css/import/bootstrap/bootstrap-3.3.2.min.css"></link>
+<link rel="stylesheet" href="../static/css/import/bootstrap/bootstrap-multiselect-0.9.15.css"></link>
+<link rel="stylesheet" href="../static/css/import/bootstrap/bootstrap-treeview.min.css"></link>
+<link rel="stylesheet" href="../static/css/import/cytoscape.js-panzoom.css"></link>
+<link rel="stylesheet" href="../static/css/import/cytoscape.js-navigator.css"></link>
+<style type="text/css">
+.div_cytoscape_content {
+	height: 800px;
+	wid 1500px;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+}
+</style>
+<body>
+	<div class="container-lg col-sm-12" style="margin-bottom: 15px;">
+			<div id="content col-sm-12">
+				<div class="form-group">
+					<div class="col-sm-7 row">
+						<div class="col-sm-4">
+							<button id="showImg" type="button" class="btn btn-default">保存图片</button>
+							<button id="clearMemo" type="button" class="btn btn-default">&nbsp;&nbsp;刷新&nbsp;&nbsp;</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 row" style="margin-top:15px;">
+					<div>
+						<div id="graph" class="div_cytoscape_content cy"></div>
+					</div>
+				</div>
+				<div><img id="entry-png-eg" /></div>
+			</div>
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function() {
+			cytoscapetest(cytoscapeutil()).init();
+		});
+	// ]]>
+	</script>
+</body>
+</html>

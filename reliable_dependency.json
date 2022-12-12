@@ -1,0 +1,6 @@
+[
+	{
+		"node1": "/Cassandra/src/java/org/apache/cassandra/cache/SerializingCache.java",
+		"node2": "/Cassandra/src/java/org/apache/cassandra/cache/SerializingCacheProvider.java"
+	}
+]

@@ -1,0 +1,8 @@
+bedidx.c;khash.h;kseq.h;
+bgzf.c;bgzf.h;knetfile.h;
+bgzip.c;bgzf.h;
+index.c;bgzf.h;khash.h;ksort.h;kstring.h;tabix.h;
+knetfile.c;knetfile.h;
+kstring.c;kstring.h;
+libtabix.a;bedidx.c;bgzf.c;index.c;knetfile.c;kstring.c;
+main.c;bgzf.h;kstring.h;tabix.h;

@@ -1,0 +1,26 @@
+{
+	"projects": [{
+		"path": "D:\\multiple-dependency\\guava\\guava-27.1",
+		"language": "java"
+	}],
+	"gits": [{
+		"path": "D:\\multiple-dependency\\guava\\guava-27.1",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "5cb62f8b84ec0aeec933b7da3250c341cbea7432",
+		"commit_id_to" : "7fd0ff50fbaf0221d9483b99db56ad604ef878d1",
+		"commit_id_current" : "8e174e76971449665658a800af6dd350806cc934",
+		"issues_directory" : "D:\\multiple-dependency\\issues\\guava"
+	}],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "D:\\multiple-dependency\\clone\\file\\guava\\27.1\\result/MeasureIndex.csv",
+		"result_path": "D:\\multiple-dependency\\clone\\file\\guava\\27.1\\similarity.csv",
+		"group_path" : "D:\\multiple-dependency\\clone\\file\\guava\\27.1\\result/type123_method_group_result.csv"
+	}],
+	"dynamics": {
+	},
+	"architectures": {},
+	"libs": []
+}

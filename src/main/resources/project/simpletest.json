@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "path": "D:\\git\\SimpleTest",
+      "serviceGroupName": "SimpleTest",
+      "project": "SimpleTest",
+      "language": "java",
+      "isMicroservice": true,
+      "microserviceName": "SimpleTest"
+    }
+  ],
+  "dynamics": {
+  },
+  "gits": [
+  ],
+  "libs": [
+  ],
+  "clones": [
+    {
+      "language": "java",
+      "granularity": "function",
+      "name_path": "D:\\multiple-dependency-project\\clone\\MearureNameCatch\\resultFolder\\MethodNameTable.csv",
+      "result_path": "D:\\multiple-dependency-project\\clone\\detect\\result\\type123_method_result.csv"
+    }
+  ]
+}

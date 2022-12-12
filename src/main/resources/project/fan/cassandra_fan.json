@@ -1,0 +1,36 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\multiple-dependency-project\\project\\cassandra-3.0.21",
+		"serviceGroupName": "cassandra",
+		"language": "java",
+		"isMicroservice": true
+	}],
+	"dynamics": {
+	},
+	"gits": [{
+		"path": "D:\\multiple-dependency-project\\project\\cassandra-3.0.21",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_time_since": "2020-02-11 05:54:00",
+	    "commit_time_until": "2020-07-15 04:15:26",
+		"commit_id_from": "8556a2b932046ee0633b0e619d3dd04b57bb653e",
+		"commit_id_to": "e39d1da325f5853ab3a64d92ecf52f8271239b9e",
+	    
+ 	}],
+	"libs": [],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/cassandra-fan/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/cassandra-fan/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/cassandra-fan/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "function",
+		"name_path"  : "src/main/resources/clone/function/cassandra-fan/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/function/cassandra-fan/similarity.csv",
+		"group_path" : "src/main/resources/clone/function/cassandra-fan/result/type123_method_group_result.csv"
+	}
+	]
+}

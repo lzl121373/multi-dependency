@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ERROR</title>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12" style="margin-bottom: 15px;">
+		<h1 th:text="${error}"></h1>
+	</div>
+</body>
+</html>

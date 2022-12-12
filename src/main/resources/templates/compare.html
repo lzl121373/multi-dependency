@@ -1,0 +1,323 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Compare</title>
+    <script th:src="@{/js/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/js/clonecompareutils.js}" type="text/javascript"></script>
+    <script th:src="@{/js/compare.js}" type="text/javascript"></script>
+    <script th:src="@{/js/codemirror.js}" type="text/javascript"></script>
+	<link rel="stylesheet" th:href="@{/css/codemirror.css}"></link>
+	<link rel="stylesheet" th:href="@{/css/compare.css}"></link>
+    <style type="text/css">
+        body {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+        }
+
+        #path-lhs {
+            font-size: 30px;
+            font-family: Arial,serif;
+            color: rgba(255, 50, 50, 0.7);
+        }
+
+        #path-rhs {
+            font-size: 30px;
+            font-family: Arial,serif;
+            color: rgba(50, 50, 255, 0.7);
+        }
+
+        #leftFileButton {
+            font-size: 20px;
+            font-family: "微软雅黑",serif;
+            background-color: #1D1D1D;
+            color: rgba(255, 50, 50, 0.7);
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        #rightFileButton {
+            font-size: 20px;
+            font-family: "微软雅黑",serif;
+            background-color: #1D1D1D;
+            color: rgba(50, 50, 255, 0.7);
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        #leftFilePath {
+            background-color: #1A1A1A;
+            color: rgba(255, 50, 50, 0.7);
+            border: 0;
+            width: 83%;
+        }
+
+        #rightFilePath {
+            background-color: #1A1A1A;
+            color: rgba(50, 50, 255, 0.7);
+            border: 0;
+            width: 86%;
+        }
+
+        #lhs_decode {
+            font-size: 20px;
+            font-family: "微软雅黑",serif;
+            background-color: #1D1D1D;
+            color: rgba(225, 50, 50, 0.7);
+            width: 140px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        #rhs_decode {
+            font-size: 20px;
+            font-family: "微软雅黑",serif;
+            background-color: #1D1D1D;
+            color: rgba(50, 50, 225, 0.7);
+            width: 140px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        #compare-lhs-margin {
+            display: none;
+        }
+
+        #compare-lhs-margin {
+            display: none;
+        }
+
+        #compare-rhs-margin {
+            display: none;
+        }
+
+        .dmsm {
+            font-family: "微软雅黑",serif;
+            font-size: 12px;
+            padding-left: 20px;
+        }
+
+        #compare .CodeMirror-lines pre {
+            transition: all 1s ease 0s;
+        }
+
+        #compare .CodeMirror-lines pre:hover {
+            background-color: #777;
+            color: #FFFFFF;
+        }
+
+        td, th {
+            border: 0;
+        }
+
+        .wbbt {
+            text-align: center;
+            border-bottom: 1px solid #333333;
+            line-height: 40px;
+        }
+
+        #compare .CodeMirror-lines pre, #compare .CodeMirror-gutter-text pre {
+            line-height: 18px;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        const sidefileName = {
+            "lhs": "",
+            "rhs": "",
+        };
+
+        function getCookie(strCookie, key){
+            var value;
+            var arrCookie = strCookie.split(";");
+            for(var i=0; i<arrCookie.length; i++){
+                var arr = arrCookie[i].split("=");
+                if(key === arr[0]){
+                    value = arr[1];
+                    break;
+                }
+            }
+            return value;
+        }
+
+        var URL = window.location.search;
+        URL = URL.split('leftFilePath=')[1];
+        var file1AbsolutePath = URL.split('&')[0];
+        var file2AbsolutePath = URL.split('rightFilePath=')[1];
+        $(document).ready(function () {
+            var lhsDecoder = document.getElementById("lhs_decode").value;
+            var rhsDecoder = document.getElementById("rhs_decode").value;
+            var strCookie = document.cookie;
+            lhsDecoder = getCookie(strCookie, "lhs_decode");
+            rhsDecoder = getCookie(strCookie, "rhs_decode");
+            switch (lhsDecoder) {
+                case "GBK":
+                    lhs_decode.selectedIndex=1;
+                    break;
+                case "GB2312":
+                    lhs_decode.selectedIndex=2;
+                    break;
+                case "GB18030":
+                    lhs_decode.selectedIndex=3;
+                    break;
+                case "ISO-8859-2":
+                    lhs_decode.selectedIndex=4;
+                    break;
+                default:
+                    lhs_decode.selectedIndex=0;
+            }
+            switch (rhsDecoder) {
+                case "GBK":
+                    rhs_decode.selectedIndex=1;
+                    break;
+                case "GB2312":
+                    rhs_decode.selectedIndex=2;
+                    break;
+                case "GB18030":
+                    rhs_decode.selectedIndex=3;
+                    break;
+                case "ISO-8859-2":
+                    rhs_decode.selectedIndex=4;
+                    break;
+                default:
+                    rhs_decode.selectedIndex=0;
+            }
+            setFilesContext(file1AbsolutePath, file2AbsolutePath, lhsDecoder, rhsDecoder);
+            window.filesInfo = function (files, target) {
+                let node = target;
+                while (true) {
+                    let nodeId = node.getAttribute("id");
+                    if (nodeId) {
+                        if (nodeId.indexOf("compare-editor-") > -1) {
+                            break;
+                        }
+                    }
+                    node = node.parentNode;
+                }
+
+                let fileName = files[0].name;
+                for (let i = 1; i < files.length; i++) {
+                    fileName += "_" + files[i].name;
+                }
+                let side = node.getAttribute("id").split("compare-editor-")[1];
+
+                //清除
+                $('#compare').mergely('clear', side);
+                //文件名
+                $("#path-" + side).html(fileName);
+                sidefileName[side] = fileName;
+            }
+            document.cookie = "lhs_decode=" + document.getElementById("lhs_decode").value;
+            document.cookie = "rhs_decode=" + document.getElementById("rhs_decode").value;
+        });
+        let myFiles;
+        function setFile(files, side) {
+            myFiles = files;
+            const file = files[0];
+            const reader = new FileReader();
+            reader.onload = function(e){
+                $('#compare').mergely(side, e.target.result);
+            }
+            reader.readAsText(file, document.getElementById(side + "_decode").value);
+            $("#path-" + side).html(file.name);
+            sidefileName[side] = file.name;
+        }
+
+        function openLeft() {
+            document.getElementById("leftFileDialog").click();
+        }
+
+        function openRight() {
+            document.getElementById("rightFileDialog").click();
+        }
+
+        function setContext() {
+            document.cookie = "lhs_decode=" + document.getElementById("lhs_decode").value;
+            document.cookie = "rhs_decode=" + document.getElementById("rhs_decode").value;
+            location.reload();
+        }
+        function copyToClip(content) {
+        	if(content.split(":").length > 1) {
+	        	content = content.split('/').join('\\');
+        	} else {
+	        	content = content.split('\\').join('/');
+        	}
+            const aux = document.createElement("input");
+            aux.setAttribute("value", content);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+            alert("复制成功：" + content);
+        }
+        function copyLeftFilePath() {
+            copyToClip(document.getElementById("leftFilePath").value);
+        }
+
+        function copyRightFilePath() {
+            copyToClip(document.getElementById("rightFilePath").value);
+        }
+
+    </script>
+</head>
+<body data-spy="scroll" data-target=".navbar-example" style="overflow-x: hidden;">
+<div class="container-fluid m0 bod top10" id="zt">
+    <h3 class="wbbt">Compare</h3>
+    <table style="width: 100%;">
+        <tbody>
+        <tr style="border-left: 1px solid #1D1D1D; border-top:1px solid #1D1D1D;">
+            <td style="width: 50.7%;background-color: #1A1A1A;color: rgba(255, 50, 50, 0.7);">
+                <div>
+                    <input id="leftFileDialog" type="file" onchange="setFile(this.files, 'lhs')" style="display: none"/>
+                    <button id="leftFileButton" type="button" onclick="openLeft()">选择</button>
+                    <label for="lhs_decode"></label>
+                    <select id="lhs_decode" value="UTF-8" onchange="setContext()">
+                        <option value="UTF-8">UTF-8</option>
+                        <option value="GBK">GBK</option>
+                        <option value="GB2312">GB2312</option>
+                        <option value="GB18030">GB18030</option>
+                        <option value="ISO-8859-2">ISO-8859-2</option>
+                    </select>
+                    <span id="path-lhs" class="dmsm"></span>
+                </div>
+                <div>
+                    <label>
+                        左文件路径：<input id="leftFilePath" type="text" size="10" maxlength="1000" th:value="${leftFilePath}" onclick="copyLeftFilePath()"/>
+                    </label>
+                </div>
+            </td>
+            <td style="width: 49.3%;background-color: #1A1A1A;color: rgba(50, 50, 255, 0.7)">
+                <div>
+                    <input id="rightFileDialog" type="file" onchange="setFile(this.files, 'rhs')" style="display: none"/>
+                    <button id="rightFileButton" type="button" onclick="openRight()">选择</button>
+                    <label for="rhs_decode"></label>
+                    <select id="rhs_decode" value="UTF-8" onchange="setContext()">
+                        <option value="UTF-8">UTF-8</option>
+                        <option value="GBK">GBK</option>
+                        <option value="GB2312">GB2312</option>
+                        <option value="GB18030">GB18030</option>
+                        <option value="ISO-8859-2">ISO-8859-2</option>
+                    </select>
+                    <span id="path-rhs" class="dmsm"></span>
+                </div>
+                <div>
+                    <label>
+                        右文件路径：<input id="rightFilePath" type="text" size="10" maxlength="1000" th:value="${rightFilePath}" onclick="copyRightFilePath()"/>
+                    </label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="mergely-resizer" style="height:800px;">
+        <div id="compare" style="display: block; width: 1365px; height: 800px; clear: both;">
+        </div>
+    </div>
+</div>
+</body>
+<audio controls="controls" style="display: none;"></audio>
+
+</html>

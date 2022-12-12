@@ -1,0 +1,489 @@
+{
+    "name": "root",
+    "children": [
+        {
+            "name": "com.android.server.am",
+            "type": 4,
+            "children": [
+                {
+                    "name": "com.android.server.am.MARsPolicyManager$8",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.wm.VRFlingerHelper",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.audio",
+            "type": 5,
+            "children": [
+                {
+                    "name": "com.android.server.audio.AudioService$UsbGamepadConnectionState",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.bridge",
+            "type": 5,
+            "children": [
+                {
+                    "name": "android.os.PersonaPolicyManager",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.clipboard",
+            "type": 4,
+            "children": [
+                {
+                    "name": "android.os.PersonaPolicyManager",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.cocktailbar",
+            "type": 4,
+            "children": [
+                {
+                    "name": "com.android.server.cocktailbar.CocktailBarManagerService$1",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.cocktailbar.CocktailBarManagerService$LocalService",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.cocktailbar.CocktailBarManagerService$Sales",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.cocktailbar.CocktailBarManagerService$TurnOffWakeUpCocktailBarRunnable",
+                    "type": 4
+                },
+                {
+                    "name": "com.samsung.android.cocktailbar.CocktailBarManagerInternal",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.connectivity",
+            "type": 3,
+            "children": [
+                {
+                    "name": "android.net.ConnectivityManager",
+                    "type": 4
+                },
+                {
+                    "name": "android.net.wifi.WifiInfo",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.enterprise.ccm",
+            "type": 4,
+            "children": [
+                {
+                    "name": "java.io.ByteArrayInputStream",
+                    "type": 4
+                },
+                {
+                    "name": "java.security.cert.Certificate",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.enterprise.otp.engine.handler.securedata",
+            "type": 5,
+            "children": [
+                {
+                    "name": "com.sec.enterprise.knox.otp.dskpp.DSKPPKeyProvClientHello",
+                    "type": 5
+                },
+                {
+                    "name": "java.io.ByteArrayInputStream",
+                    "type": 5
+                },
+                {
+                    "name": "java.security.cert.Certificate",
+                    "type": 5
+                },
+                {
+                    "name": "java.security.cert.CertificateFactory",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.enterprise.otp",
+            "type": 4,
+            "children": [
+                {
+                    "name": "com.sec.enterprise.knox.otp.dskpp.DSKPPKeyProvClientHello",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.location",
+            "type": 3,
+            "children": [
+                {
+                    "name": "android.hardware.scontext.SContextGyroTemperature",
+                    "type": 4
+                },
+                {
+                    "name": "android.location.IExerciseLocationListener",
+                    "type": 4
+                },
+                {
+                    "name": "android.location.IExerciseLocationProvider",
+                    "type": 4
+                },
+                {
+                    "name": "android.location.IExerciseLocationProvider$Stub",
+                    "type": 4
+                },
+                {
+                    "name": "android.telephony.cdma.CdmaCellLocation",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider$11",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$1",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$2",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$3",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$4",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$ExerciseListener",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.GpsLocationProvider_samsung$Vendor",
+                    "type": 4
+                },
+                {
+                    "name": "android.location.GeoFenceParams",
+                    "type": 5
+                },
+                {
+                    "name": "android.location.IGeoFenceListener$Stub",
+                    "type": 5
+                },
+                {
+                    "name": "android.location.IGeoFencer",
+                    "type": 5
+                },
+                {
+                    "name": "android.location.IGeoFencer$Stub",
+                    "type": 5
+                },
+                {
+                    "name": "android.net.ConnectivityManager",
+                    "type": 5
+                },
+                {
+                    "name": "com.android.server.location.GeoFencerBase",
+                    "type": 5
+                },
+                {
+                    "name": "com.android.server.location.GeoFencerProxy",
+                    "type": 5
+                },
+                {
+                    "name": "com.android.server.location.GeoFencerProxy$1",
+                    "type": 5
+                },
+                {
+                    "name": "com.android.server.location.GeoFencerProxy$2",
+                    "type": 5
+                },
+                {
+                    "name": "com.android.server.location.LocationBlacklist",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.media",
+            "type": 4,
+            "children": [
+                {
+                    "name": "android.app.PendingIntent$OnFinished",
+                    "type": 4
+                },
+                {
+                    "name": "android.media.IAudioService",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.pm",
+            "type": 3,
+            "children": [
+                {
+                    "name": "java.util.Set",
+                    "type": 4
+                },
+                {
+                    "name": "com.sec.tima.keystore.util.Utility",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.policy",
+            "type": 4,
+            "children": [
+                {
+                    "name": "com.android.server.policy.GlobalActions$99",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.policy.GlobalActions$99$1",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.power",
+            "type": 3,
+            "children": [
+                {
+                    "name": "com.android.server.power.ShutdownDialog$StatePrepare$1",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.power.ShutdownDialog$2",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server",
+            "type": 3,
+            "children": [
+                {
+                    "name": "android.ktuca.KtUcaService",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.DeviceIdleController$6",
+                    "type": 4
+                },
+                {
+                    "name": "com.android.server.location.LocationBlacklist",
+                    "type": 4
+                },
+                {
+                    "name": "android.app.PendingIntent$OnFinished",
+                    "type": 5
+                },
+                {
+                    "name": "android.location.IExerciseLocationListener",
+                    "type": 5
+                },
+                {
+                    "name": "android.provider.Settings$SettingNotFoundException",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.tv",
+            "type": 5,
+            "children": [
+                {
+                    "name": "java.util.Set",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.usb",
+            "type": 5,
+            "children": [
+                {
+                    "name": "android.media.IAudioService",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.wifioffload",
+            "type": 4,
+            "children": [
+                {
+                    "name": "android.provider.Settings$SettingNotFoundException",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.android.server.wm",
+            "type": 5,
+            "children": [
+                {
+                    "name": "com.samsung.android.multidisplay.common.MultiDisplayFeatures",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.samsung.accessory.manager.authentication.cover",
+            "type": 3,
+            "children": [
+                {
+                    "name": "com.samsung.accessory.manager.authentication.cover.CoverAuthenticator$12",
+                    "type": 4
+                },
+                {
+                    "name": "com.samsung.accessory.manager.authentication.cover.CoverAuthenticator$12$1",
+                    "type": 4
+                },
+                {
+                    "name": "com.samsung.accessory.manager.authentication.cover.CoverAuthenticator$11$1",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.samsung.android.iccc",
+            "type": 3,
+            "children": [
+                {
+                    "name": "android.service.iccc.IIcccManager",
+                    "type": 4
+                },
+                {
+                    "name": "android.service.iccc.IIcccManager$Stub",
+                    "type": 4
+                },
+                {
+                    "name": "android.service.iccc.IIcccManager$Stub$Proxy",
+                    "type": 4
+                },
+                {
+                    "name": "com.samsung.android.iccc.IIntegrityControlCheckCenter",
+                    "type": 5
+                },
+                {
+                    "name": "com.samsung.android.iccc.IIntegrityControlCheckCenter$Stub",
+                    "type": 5
+                },
+                {
+                    "name": "com.samsung.android.iccc.IIntegrityControlCheckCenter$Stub$Proxy",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.samsung.ucm.ucmservice.scp",
+            "type": 3,
+            "children": [
+                {
+                    "name": "com.sec.tima.keystore.util.Utility",
+                    "type": 4
+                },
+                {
+                    "name": "com.samsung.ucm.ucmservice.scp.TADriver$CACertPubType",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.sec.epdg.smartwifi",
+            "type": 3,
+            "children": [
+                {
+                    "name": "android.net.wifi.WifiInfo",
+                    "type": 4
+                },
+                {
+                    "name": "java.lang.Boolean",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.sec.epdg",
+            "type": 3,
+            "children": [
+                {
+                    "name": "com.sec.epdg.IWlanError$IkeError",
+                    "type": 4
+                },
+                {
+                    "name": "java.lang.Boolean",
+                    "type": 4
+                },
+                {
+                    "name": "java.lang.StringIndexOutOfBoundsException",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.sec.epdg.throttle",
+            "type": 5,
+            "children": [
+                {
+                    "name": "com.sec.epdg.IWlanError$IkeError",
+                    "type": 5
+                }
+            ]
+        },
+        {
+            "name": "com.sec.server.enterprise.knoxcustom",
+            "type": 4,
+            "children": [
+                {
+                    "name": "android.net.EthernetManager",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "com.sun.org.apache.xml.internal.security.keys.storage.implementations",
+            "type": 4,
+            "children": [
+                {
+                    "name": "java.security.cert.CertificateFactory",
+                    "type": 4
+                }
+            ]
+        },
+        {
+            "name": "mf.org.apache.xerces.dom",
+            "type": 4,
+            "children": [
+                {
+                    "name": "java.lang.StringIndexOutOfBoundsException",
+                    "type": 4
+                }
+            ]
+        }
+    ]
+}

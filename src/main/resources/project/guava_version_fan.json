@@ -1,0 +1,77 @@
+{
+	"projects": [{
+		"path": "D:\\git\\article\\guava-25.1",
+		"language": "java"
+	}, {
+		"path": "D:\\git\\article\\guava-27.0",
+		"language": "java"
+	}, {
+		"path": "D:\\git\\article\\guava-27.1",
+		"language": "java"
+	}, {
+		"path": "D:\\git\\article\\guava-28.1",
+		"language": "java"
+	}],
+	"gits": [{
+		"path": "D:\\git\\article\\guava-25.1",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "5cb62f8b84ec0aeec933b7da3250c341cbea7432",
+		"commit_id_to" : "9704538cd9aa8e4b783b824773cfc76290f572c2",
+		"commit_id_current" : "824f80f850edec1be70465ac3e40621a9b67f892",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\guava"
+ 	}, {
+		"path": "D:\\git\\article\\guava-27.0",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "824f80f850edec1be70465ac3e40621a9b67f892",
+		"commit_id_to" : "8e174e76971449665658a800af6dd350806cc934",
+		"commit_id_current" : "9704538cd9aa8e4b783b824773cfc76290f572c2",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\guava"
+ 	}, {
+		"path": "D:\\git\\article\\guava-27.1",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "9704538cd9aa8e4b783b824773cfc76290f572c2",
+		"commit_id_to" : "b503ce6589fbb892d2affca6cc7ac07776e2fc15",
+		"commit_id_current" : "8e174e76971449665658a800af6dd350806cc934",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\guava"
+ 	}, {
+		"path": "D:\\git\\article\\guava-28.1",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "8e174e76971449665658a800af6dd350806cc934",
+		"commit_id_to" : "510021e1ab0fc10d7f31428a022a27fa75ce3fe4",
+		"commit_id_current" : "b503ce6589fbb892d2affca6cc7ac07776e2fc15",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\guava"
+ 	}],
+ 	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/guava/version/25.1/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/guava/version/25.1/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/guava/version/25.1/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/guava/version/27.0/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/guava/version/27.0/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/guava/version/27.0/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/guava/version/27.1/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/guava/version/27.1/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/guava/version/27.1/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/guava/version/28.1/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/guava/version/28.1/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/guava/version/28.1/result/type123_method_group_result.csv"
+	}],
+	"dynamics": {
+	},
+	"architectures": {},
+	"libs": []
+}

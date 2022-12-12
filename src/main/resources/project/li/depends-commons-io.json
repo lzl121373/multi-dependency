@@ -1,0 +1,39 @@
+{
+  "architectures": {},
+  "projects": [{
+    "path": "D:\\program\\commons-io",
+    "includeDirs": [],
+    "microserviceName": "commons-io",
+    "autoInclude": true,
+    "serviceGroupName": "commons-io",
+    "project": "commons-io",
+    "language": "java",
+    "isMicroservice": true,
+    "tagPrefixes": [
+    ],
+    "excludes": [
+    ]
+  }],
+  "dynamics": {
+    "file_suffixes": [
+      ""
+    ],
+    "logs_path": "",
+    "features_path": ""
+  },
+  "gits": [],
+  "libs": [],
+  "clones": [{
+    "language"   : "java",
+    "granularity": "file",
+    "name_path"  : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\MeasureIndex.csv",
+    "result_path": "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\similarity.csv",
+    "group_path" : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\type123_method_group_result.csv"
+  },{
+    "language"   : "java",
+    "granularity": "function",
+    "name_path"  : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\result\\MeasureIndex.csv",
+    "result_path": "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\similarity.csv",
+    "group_path" : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\function\\result\\type123_method_group_result.csv"
+  }]
+}

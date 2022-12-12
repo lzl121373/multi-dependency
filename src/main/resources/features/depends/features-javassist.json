@@ -1,0 +1,263 @@
+{
+	"features" : [
+		{
+			"id" : 0,
+			"name" : "解析java代码",
+			"description" : ""
+		}, 
+		{
+			"id" : 1,
+			"name" : "java-识别注解",
+			"description" : ""
+		},
+		{
+			"id" : 2,
+			"name" : "java-识别在类上是否使用了注解",
+			"description" : ""
+		},
+		{
+			"id" : 3,
+			"name" : "java-识别在方法上是否使用了注解",
+			"description" : ""
+		},
+		{
+			"id" : 4,
+			"name" : "java-识别在属性上是否使用了注解",
+			"description" : ""
+		},
+		{
+			"id" : 5,
+			"name" : "java-识别import导入其它类型",
+			"description" : ""
+		},
+		{
+			"id" : 6,
+			"name" : "识别继承关系",
+			"description" : ""
+		},
+		{
+			"id" : 7,
+			"name" : "解析C/C++代码",
+			"description" : ""
+		}
+	],
+	"testcases" : [
+		{
+			"id" : 0,
+			"name" : "depends.extractor.cpp.AliasTest.test_genericTypes",
+			"input" : "",
+			"success" : true,
+			"features" : [
+				
+			],
+			"traces" : [
+				"depends.extractor.cpp.AliasTest.test_genericTypes"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 1,
+			"name" : "depends.extractor.cpp.AliasTest.test_refer_to_alias_type_should_work",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.AliasTest.test_refer_to_alias_type_should_work"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 2,
+			"name" : "depends.extractor.cpp.AliasTest.test_multi_declares_should_only_count_actual_referred",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.AliasTest.test_multi_declares_should_only_count_actual_referred"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 3,
+			"name" : "depends.extractor.cpp.ImplementRelationTest.should_detect_implements_from_source_to_header",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.ImplementRelationTest.should_detect_implements_from_source_to_header"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 4,
+			"name" : "depends.extractor.cpp.extendsTest.full_qualified_names_should_be_resolved",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.extendsTest.full_qualified_names_should_be_resolved"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 5,
+			"name" : "depends.extractor.cpp.IncludeRelationTest.test_includefiles_should_be_imported_relations",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.IncludeRelationTest.test_includefiles_should_be_imported_relations"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 6,
+			"name" : "depends.extractor.cpp.IncludeRelationTest.test_could_found_files_in_include_path",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.IncludeRelationTest.test_could_found_files_in_include_path"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 7,
+			"name" : "depends.extractor.cpp.IncludeRelationTest.test_type_t_should_be_treat_as_structure",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.IncludeRelationTest.test_type_t_should_be_treat_as_structure"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 8,
+			"name" : "depends.extractor.cpp.IncludeRelationTest.test_call_should_only_in_relations_with_include",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.IncludeRelationTest.test_call_should_only_in_relations_with_include"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 9,
+			"name" : "depends.extractor.cpp.IncludeRelationTest.should_find_include_relation_in_conditional_macro_block",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.cpp.IncludeRelationTest.should_find_include_relation_in_conditional_macro_block"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 10,
+			"name" : "depends.extractor.java.JavaFileImportTest.test_wildcard_import_should_be_lookedup",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.java.JavaFileImportTest.test_wildcard_import_should_be_lookedup"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 11,
+			"name" : "depends.extractor.java.JavaEmbededClassTest.test_EmbededTypeWithImport",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.java.JavaEmbededClassTest.test_EmbededTypeWithImport"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 12,
+			"name" : "depends.extractor.java.JavaEmbededClassTest.test_EmbededTypeWithoutImport",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.java.JavaEmbededClassTest.test_EmbededTypeWithoutImport"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 13,
+			"name" : "depends.extractor.java.JavaTypeInferUnderSamePackageTest.test_GenericTypeShouldBeIdentified",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.java.JavaTypeInferUnderSamePackageTest.test_GenericTypeShouldBeIdentified"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 14,
+			"name" : "depends.extractor.pom.DependencyWithPropertiesOfParentTest.should_extract_dep_relation",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.pom.DependencyWithPropertiesOfParentTest.should_extract_dep_relation"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 15,
+			"name" : "depends.extractor.pom.DependencyWithPropertiesOfParentTest.should_extract_plugin_relation",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.pom.DependencyWithPropertiesOfParentTest.should_extract_plugin_relation"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 16,
+			"name" : "depends.extractor.python.PythonFunctionTest.should_parse_methods",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.python.PythonFunctionTest.should_parse_methods"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 17,
+			"name" : "depends.extractor.python.PythonFunctionTest.should_parse_method_parameters",
+			"input" : "",
+			"success" : true,
+			"features" : [
+			],
+			"traces" : [
+				"depends.extractor.python.PythonFunctionTest.should_parse_method_parameters"
+			],
+			"description" : ""
+		}
+	]
+}

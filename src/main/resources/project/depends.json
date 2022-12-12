@@ -1,0 +1,17 @@
+{
+	"projects" : [
+		{
+			"path": "D:\\multiple-dependency-project\\depends",
+			"project": "depends",
+			"language": "java",
+			"isMicroservice": false,
+			"excludes" : [
+				"/src/test/resources/java-code-examples/EclipseTestBase_No_ResponseDuirngTypeResolve.java",
+				"/src/test/resources/**",
+				"/target/classes/**",
+				"/target/test-classes/**"
+				]
+		}
+		
+		]
+}

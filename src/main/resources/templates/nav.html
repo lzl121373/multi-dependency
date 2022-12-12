@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<div th:fragment = "nav">
+		<nav class="navbar navbar-default" role="navigation" >
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/index">Multiple Dependency Analysis</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li><a href="/overview"> OverView </a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dependency Graph <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="/project/graph">Circle Packing</a></li>
+								<li class="divider"></li>
+								<li><a href="/project/combo_chart?projectId=-1">Combo Chart</a></li>
+								<li class="divider"></li>
+								<li><a href="/project/coupling_chart">Coupling Chart</a></li>
+								<li class="divider"></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Metric <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="/metric">Project Metric</a></li>
+								<li class="divider"></li>
+								<li><a href="/metric/smell">Smell Metric</a></li>
+								<li class="divider"></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="/feature/index"> Feature </a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="/testcase/index"> TestCase </a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="/multiple/all"> MicroService Dependency </a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="/git"> Commit/Issue </a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Clone <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="/clonegroup">克隆组查询</a></li>
+								<li class="divider"></li>
+								<li><a href="/clone/packages">跨包克隆查询</a></li>
+								<li class="divider"></li>
+								<li><a href="/cloneaggregation">跨包克隆聚合查询</a></li>
+								<li class="divider"></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Architectural Smell <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/as/overview">Smell Overview</a></li>
+							<li class="divider"></li>
+							<li><a href="/as/detect">Smell Detect</a></li>
+						</ul>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: 336120
+      uri: bolt://localhost:7687
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+server:
+  port: 8080
+
+
+data:
+  project_config: src/main/resources/project/li/depends-commons-io.json
+  project_analyse_threads_count: -1
+  dynamic_analyse: false
+  git_analyse: false
+  lib_analyse: false
+  clone_analyse: true
+  alltag_analyse: false
+  diff_analyse: false
+  snapshot_analyse: false
+
+
+  neo4j:
+    delete: true
+    # batchInserter要插入的数据库
+    data_path: D:\Program Files\neo4j-community-4.2.3\data
+    database_name: multi-dependency-commons-io-clone.db
+
+  serialize_path: D:/data/statictxt/RepositoryService-commons-io-clone.txt
+  batch_serialize: true
+  anonymization: false
+
+config:
+  starter:
+    #      cochange: false
+    #      depends_on: false
+    cochange: false
+    depends_on: true
+    clone_group: true
+    module_clone: false
+    aggregation_clone: false
+    smell: false
+    modularity: false
+    export_cyclic_dependency: false

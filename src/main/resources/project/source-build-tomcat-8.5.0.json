@@ -1,0 +1,48 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "/Users/fulco/Desktop/source/tomcat-8.5.0",
+		"includeDirs": [],
+		"microserviceName": "tomcat",
+		"autoInclude": true,
+		"serviceGroupName": "tomcat",
+		"project": "tomcat",
+		"language": "java",
+		"isMicroservice": true,
+		"tagPrefixes": [
+		],
+		"excludes": [
+			"/Users/fulco/Desktop/source/tomcat-8.5.0/modules/jdbc-pool/src/test",
+			"/Users/fulco/Desktop/source/tomcat-8.5.0/test",
+			"/Users/fulco/Desktop/source/tomcat-8.5.0/webapps"
+		]
+	}],
+	"dynamics": {
+		"file_suffixes": [
+			""
+		],
+		"logs_path": "",
+		"features_path": ""
+	},
+	"gits": [{
+		"path": "/Users/fulco/Desktop/source/tomcat-8.5.0",
+		"project": "tomcat",
+		"specify_commit_range": true,
+		"specify_by_commit_id": false,
+		"commit_id_from": "",
+		"commit_id_to": "",
+		"commit_id_current": "",
+		"commit_time_since": "2011-7-29 00:00:00",
+		"commit_time_until": "2021-12-31 00:00:00",
+		"issueFrom": "",
+		"issues_directory": "",
+		"calculate_cochange": false,
+		"language": "java",
+		"for_tag": false,
+		"for_diff": true,
+		"CLDiff_output_dir": "/Users/fulco/Desktop/source/mycldiff/tomcat-8.5.0",
+		"GitJson_output_dir": "/Users/fulco/Desktop/source/myfunctions/tomcat-8.5.0"
+	}],
+	"libs": [],
+	"clones": []
+}

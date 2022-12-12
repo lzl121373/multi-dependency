@@ -1,0 +1,51 @@
+.node {
+    font: 300 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    fill: #bbb;
+}
+
+.node:hover {
+    fill: #0a0a0a;
+}
+
+.link {
+    stroke: DarkGray; // steelblue;
+    stroke-opacity: .4;
+    fill: none;
+    pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+    font-weight: 700;
+}
+
+.node--source {
+    /*fill: #2ca02c;*/
+    fill: #d62728;
+}
+
+.node--target {
+    /*fill: #d62728;*/
+    fill: #d62728;
+}
+
+.link--source,
+.link--target {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+}
+
+.link--source {
+    /*stroke: #d62728;*/
+    stroke: #2ca02c;
+}
+
+.link--target {
+    /*stroke: #2ca02c;*/
+    stroke: #d62728;
+}
+
+#svg {
+    width: 100%;
+}

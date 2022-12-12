@@ -1,0 +1,54 @@
+{
+	"projects" : [
+		{
+			"path": "/home/fudan/clonetrack-git/2020-01-16/NCE_fdu/ACTAdapter",
+			"project": "ACTAdapter",
+			"language": "java",
+			"isMicroservice": true,
+			"microserviceName" : "ACTAdapter",
+			"serviceGroupName": "NCE",
+			"includeDirs" : [],
+			"autoInclude" : true
+		},
+		{
+			"path": "/home/fudan/clonetrack-git/2020-01-16/NCE_fdu/ACTDataSyncService",
+			"project": "ACTDataSyncService",
+			"language": "java",
+			"isMicroservice": true,
+			"microserviceName" : "ACTDataSyncService",
+			"serviceGroupName": "NCE",
+			"includeDirs" : [],
+			"autoInclude" : true
+		},
+		{
+			"path": "/home/fudan/clonetrack-git/2020-01-16/NCE_fdu/CBBTPubServer",
+			"project": "CBBTPubServer",
+			"language": "cpp",
+			"isMicroservice": true,
+			"microserviceName" : "CBBTPubServer",
+			"serviceGroupName": "NCE",
+			"includeDirs" : [],
+			"autoInclude" : true
+		},
+		{
+			"path": "/home/fudan/clonetrack-git/2020-01-16/NCE_fdu/TCClientService",
+			"project": "TCClientService",
+			"language": "cpp",
+			"isMicroservice": true,
+			"microserviceName" : "TCClientService",
+			"serviceGroupName": "NCE",
+			"includeDirs" : [],
+			"autoInclude" : true
+		},
+		{
+			"path": "/home/fudan/clonetrack-git/2020-01-16/NCE_fdu/TCClientService",
+			"project": "TCClientService",
+			"language": "java",
+			"isMicroservice": true,
+			"microserviceName" : "TCClientService",
+			"serviceGroupName": "NCE",
+			"includeDirs" : [],
+			"autoInclude" : true
+		}
+	]
+}

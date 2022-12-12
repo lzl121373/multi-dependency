@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Unused Include</title>
+	<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/as/unusedinclude.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"/>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12">
+		<div id="content" style="width: 100%"></div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+		 	var project = [[${project}]];
+			var fileUnusedIncludeMap = [[${fileUnusedIncludeMap}]];
+			 unusedInclude().unusedInclude(project, fileUnusedIncludeMap);
+		});
+		// ]]>
+	</script>
+<!--	<script type="text/javascript" th:src="@{/js/circlechart.js}"></script>-->
+</body>
+</html>

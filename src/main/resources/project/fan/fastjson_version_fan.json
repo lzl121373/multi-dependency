@@ -1,0 +1,139 @@
+{
+	"projects": [{
+		"path": "D:\\git\\article\\fastjson-1.2.06",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.09",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.12",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.31",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.47",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.56",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\fastjson-1.2.62",
+		"language": "java"
+	},{
+		"path": "D:\\git\\article\\guava-27.1",
+		"language": "java"
+	}],
+	"gits": [{
+		"path": "D:\\git\\article\\fastjson-1.2.06",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "48d8f8c0ade1b9817f80df861050529936d23e70",
+		"commit_id_to" : "1c74949dbb565ae0fa68b13320efcacbc5c7400b",
+		"commit_id_current" : "50c8b4d366c9de1f3568ea23a216e5b69ae9e640",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.09",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "50c8b4d366c9de1f3568ea23a216e5b69ae9e640",
+		"commit_id_to" : "3339419d999830665bd7c73b8df561d12cf92772",
+		"commit_id_current" : "1c74949dbb565ae0fa68b13320efcacbc5c7400b",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.12",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "1c74949dbb565ae0fa68b13320efcacbc5c7400b",
+		"commit_id_to" : "1a8496e531c6a6dadba37ece5bcc4e55ec07ae81",
+		"commit_id_current" : "3339419d999830665bd7c73b8df561d12cf92772",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.31",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "3339419d999830665bd7c73b8df561d12cf92772",
+		"commit_id_to" : "03d77b6e629b6ff825a1c8cc3f7cbba7feb98395",
+		"commit_id_current" : "1a8496e531c6a6dadba37ece5bcc4e55ec07ae81",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.47",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "1a8496e531c6a6dadba37ece5bcc4e55ec07ae81",
+		"commit_id_to" : "e44c60347298924c588012c9cf158f3e3eb993f6",
+		"commit_id_current" : "03d77b6e629b6ff825a1c8cc3f7cbba7feb98395",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.56",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "03d77b6e629b6ff825a1c8cc3f7cbba7feb98395",
+		"commit_id_to" : "036012f292f9cb81e051551c3647d3ef83659d84",
+		"commit_id_current" : "e44c60347298924c588012c9cf158f3e3eb993f6",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\fastjson-1.2.62",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "e44c60347298924c588012c9cf158f3e3eb993f6",
+		"commit_id_to" : "36e032221d05bae0ebdfc3127fd2469aff1ea221",
+		"commit_id_current" : "036012f292f9cb81e051551c3647d3ef83659d84",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\fastjson"
+ 	}, {
+		"path": "D:\\git\\article\\guava-27.1",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from" : "5cb62f8b84ec0aeec933b7da3250c341cbea7432",
+		"commit_id_to" : "7fd0ff50fbaf0221d9483b99db56ad604ef878d1",
+		"commit_id_current" : "8e174e76971449665658a800af6dd350806cc934",
+		"issues_directory" : "D:\\git\\multi-dependency\\src\\main\\resources\\git\\issues\\guava"
+	}],
+ 	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.06/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.06/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.06/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.09/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.09/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.09/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.31/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.31/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.31/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.47/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.47/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.47/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.56/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.56/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.56/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/fastjson/version/1.2.62/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/fastjson/version/1.2.62/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/fastjson/version/1.2.62/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/guava/version/27.1/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/guava/version/27.1/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/guava/version/27.1/result/type123_method_group_result.csv"
+	}],
+	"dynamics": {
+	},
+	"architectures": {},
+	"libs": []
+}

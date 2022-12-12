@@ -1,0 +1,1030 @@
+{
+	"scenarios" : [
+		{
+			"id" : 0,
+			"name" : "登录",
+			"description" : "输入用户名、密码等，无误后能够使用系统",
+			"testcases" : [
+				0, 1
+			]
+		},
+		{
+			"id" : 1,
+			"name" : "查票",
+			"description" : "根据输入查询所需车票",
+			"testcases" : [
+				100, 101, 110, 111, 120, 121, 130, 140, 150
+			]
+		},
+		{
+			"id" : 3,
+			"name" : "订票",
+			"description" : "用户订购查询到的车票",
+			"testcases" : [
+				301, 302
+			]
+		},
+		{
+			"id" : 5,
+			"name" : "订单管理",
+			"description" : "用户管理订单",
+			"testcases" : [
+				510
+			]
+		},
+		{
+			"id" : 6,
+			"name" : "托运管理",
+			"description" : "用户管理托运订单",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 7,
+			"name" : "取票",
+			"description" : "对已支付的订单，用户取票",
+			"testcases" : [
+
+			]
+		},
+		{
+			"id" : 8,
+			"name" : "检票进站",
+			"description" : "用户检票进站",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 10,
+			"name" : "管理员订单管理",
+			"description" : "管理员对订票列表进行增删改查",
+			"testcases" : [
+                 1010,1020,1030,1040
+			]
+		},
+		{
+			"id" : 11,
+			"name" : "管理员路线管理",
+			"description" : "管理员对路线列表进行增删改查",
+			"testcases" : [
+				1110,1120,1121,1122,1130,1131,1140
+			]
+		},
+		{
+			"id" : 12,
+			"name" : "管理员车次管理",
+			"description" : "管理员对车次列表进行增删改查",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 13,
+			"name" : "管理员用户管理",
+			"description" : "管理员对用户列表进行增删改查",
+			"testcases" : [
+				1310
+			]
+		},
+		{
+			"id" : 14,
+			"name" : "管理员联系人信息管理",
+			"description" : "管理员对用户联系人列表进行增删改查",
+			"testcases" : [
+
+			]
+		},
+		{
+			"id" : 15,
+			"name" : "管理员车站信息管理",
+			"description" : "管理员对车站列表进行增删改查",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 16,
+			"name" : "管理员列车信息管理",
+			"description" : "管理员对列车类型列表进行增删改查",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 17,
+			"name" : "管理员线路价格管理",
+			"description" : "管理员对线路价格列表进行增删改查",
+			"testcases" : [
+			]
+		},
+		{
+			"id" : 18,
+			"name" : "管理员配置信息管理",
+			"description" : "管理员对配置信息进行增删改查",
+			"testcases" : [
+			]
+		}
+	],
+	"features" : [
+		{
+			"id" : 0,
+			"name" : "登录",
+			"description" : "用户登录"
+		},
+		{
+			"id" : 1,
+			"name" : "校验用户账号密码",
+			"description" : "输入用户名、密码等，无误后能够使用系统",
+			"parentId" : 0
+		},
+		{
+			"id" : 2,
+			"name" : "获取用户验证码",
+			"description" : "在登录时，能够获取到验证码",
+			"parentId" : 0
+		},
+		{
+			"id" : 3,
+			"name" : "校验管理员账号密码",
+			"description" : "输入用户名、密码等，无误后管理员登录系统",
+			"parentId" : 0
+		},
+		{
+			"id" : 10,
+			"name" : "查票",
+			"description" : "能够根据输入查询所需车票"
+		},
+		{
+			"id" : 11,
+			"name" : "根据TrainType-GaoTie DongChe查票",
+			"description" : "能够根据TrainType-GaoTie DongChe查票",
+			"parentId" : 10
+		},
+		{
+			"id" : 12,
+			"name" : "根据TrainType-Other查票",
+			"description" : "能够根据TrainType-Other查票",
+			"parentId" : 10
+		},
+		{
+			"id" : 13,
+			"name" : "根据SearchType-Minimum Station Number查票",
+			"description" : "能够根据SearchType-Minimum Station Number查票",
+			"parentId" : 10
+		},
+		{
+			"id" : 14,
+			"name" : "根据SearchType-Cheapest查票",
+			"description" : "能够根据SearchType-Cheapest查票",
+			"parentId" : 10
+		},
+		{
+			"id" : 15,
+			"name" : "根据SearchType-Quickest查票",
+			"description" : "能够根据SearchType-Quickest查票",
+			"parentId" : 10
+		},
+		{
+			"id" : 30,
+			"name" : "订票",
+			"description" : "能够订购查询的车票"
+		},
+		{
+			"id" : 31,
+			"name" : "选择座位类型",
+			"description" : "选择座位类型-1st/2st",
+			"parentId" : 30
+		},
+		{
+			"id" : 32,
+			"name" : "查询所有保险",
+			"description" : "能够查询所有保险",
+			"parentId" : 30
+		},
+		{
+			"id" : 33,
+			"name" : "查询所有餐品",
+			"description" : "能够查询所有餐品",
+			"parentId" : 30
+		},
+		{
+			"id" : 34,
+			"name" : "查询账户所有联系方式",
+			"description" : "能够查询账户下所有联系方式",
+			"parentId" : 30
+		},
+		{
+			"id" : 35,
+			"name" : "添加联系方式",
+			"description" : "能够添加账户联系方式",
+			"parentId" : 30
+		},
+		{
+			"id" : 36,
+			"name" : "添加托运",
+			"description" : "能够添加托运",
+			"parentId" : 30
+		},
+
+		{
+			"id" : 50,
+			"name" : "订单管理",
+			"description" : "管理订单列表"
+		},
+		{
+			"id" : 51,
+			"name" : "付款",
+			"description" : "能够支付所订票的款项",
+			"parentId" : 50
+		},
+		{
+			"id" : 52,
+			"name" : "取消订单",
+			"description" : "能够取消订单",
+			"parentId" : 50
+		},
+		{
+			"id" : 53,
+			"name" : "修改订单",
+			"description" : "能够修改订单",
+			"parentId" : 50
+		},
+		{
+			"id" : 54,
+			"name" : "打印车票凭证",
+			"description" : "对已完成的车票，能够打印凭证"
+		},
+		{
+			"id" : 60,
+			"name" : "托运管理",
+			"description" : "能够进行托运管理"
+		},
+		{
+			"id" : 61,
+			"name" : "查看托运订单列表",
+			"description" : "能够查看订单托运列表",
+			"parentId" : 60
+		},
+
+		{
+			"id" : 70,
+			"name" : "取票",
+			"description" : "对已支付的订单，能够进行检票"
+		},
+		{
+			"id" : 80,
+			"name" : "检票进站",
+			"description" : "对已检票的车票，用户能够进站"
+		},
+		{
+			"id" : 100,
+			"name" : "管理员订单管理",
+			"description" : "管理员对订票列表进行增删改查"
+		},
+		{
+			"id" : 101,
+			"name" : "管理员查看订单列表",
+			"description" : "管理员查看订单列表",
+			"parentId" : 100
+		},
+		{
+			"id" : 102,
+			"name" : "管理员添加订单",
+			"description" : "管理员添加订单",
+			"parentId" : 100
+		},
+		{
+			"id" : 103,
+			"name" : "管理员更新订单",
+			"description" : "管理员更新订单",
+			"parentId" : 100
+		},
+		{
+			"id" : 104,
+			"name" : "管理员删除订单",
+			"description" : "管理员删除订单",
+			"parentId" : 100
+		},
+		{
+			"id" : 110,
+			"name" : "管理员路线管理",
+			"description" : "管理员对路线列表进行增删改查"
+		},
+		{
+			"id" : 111,
+			"name" : "管理员查看路线列表",
+			"description" : "管理员查看路线列表",
+			"parentId" : 110
+		},
+		{
+			"id" : 112,
+			"name" : "管理员添加路线",
+			"description" : "管理员添加路线",
+			"parentId" : 110
+		},
+		{
+			"id" : 113,
+			"name" : "管理员修改路线",
+			"description" : "管理员修改路线",
+			"parentId" : 110
+		},
+		{
+			"id" : 114,
+			"name" : "管理员删除路线",
+			"description" : "管理员删除路线",
+			"parentId" : 110
+		},
+		{
+			"id" : 120,
+			"name" : "管理员车次管理",
+			"description" : "管理员对车次列表进行增删改查"
+		},
+		{
+			"id" : 121,
+			"name" : "管理员查看车次列表",
+			"description" : "管理员查看车次列表",
+			"parentId" : 120
+		},
+		{
+			"id" : 122,
+			"name" : "管理员添加车次",
+			"description" : "管理员添加车次",
+			"parentId" : 120
+		},
+		{
+			"id" : 123,
+			"name" : "管理员修改车次",
+			"description" : "管理员修改车次",
+			"parentId" : 120
+		},
+		{
+			"id" : 124,
+			"name" : "管理员删除车次",
+			"description" : "管理员删除车次",
+			"parentId" : 120
+		},
+		{
+			"id" : 130,
+			"name" : "管理员用户管理",
+			"description" : "管理员对用户列表进行增删改查"
+		},
+		{
+			"id" : 131,
+			"name" : "管理员查看用户列表",
+			"description" : "管理员查看用户列表",
+			"parentId" : 130
+		},
+		{
+			"id" : 132,
+			"name" : "管理员添加用户",
+			"description" : "管理员添加用户",
+			"parentId" : 130
+		},
+		{
+			"id" : 133,
+			"name" : "管理员修改用户",
+			"description" : "管理员修改用户",
+			"parentId" : 130
+		},
+		{
+			"id" : 134,
+			"name" : "管理员删除用户",
+			"description" : "管理员删除用户",
+			"parentId" : 130
+		},
+		{
+			"id" : 140,
+			"name" : "管理员联系人信息管理",
+			"description" : "管理员对用户联系人列表进行增删改查"
+		},
+		{
+			"id" : 141,
+			"name" : "管理员查看用户联系人列表",
+			"description" : "管理员查看用户联系人列表",
+			"parentId" : 140
+		},
+		{
+			"id" : 142,
+			"name" : "管理员添加用户联系人",
+			"description" : "管理员添加用户联系人",
+			"parentId" : 140
+		},
+		{
+			"id" : 143,
+			"name" : "管理员修改用户联系人",
+			"description" : "管理员修改用户联系人",
+			"parentId" : 140
+		},
+		{
+			"id" : 144,
+			"name" : "管理员删除用户联系人",
+			"description" : "管理员删除用户联系人",
+			"parentId" : 140
+		},
+		{
+			"id" : 150,
+			"name" : "管理员车站信息管理",
+			"description" : "管理员对车站列表进行增删改查"
+		},
+		{
+			"id" : 151,
+			"name" : "管理员查看车站列表",
+			"description" : "管理员查看车站列表",
+			"parentId" : 150
+		},
+		{
+			"id" : 152,
+			"name" : "管理员添加车站",
+			"description" : "管理员添加车站",
+			"parentId" : 150
+		},
+		{
+			"id" : 153,
+			"name" : "管理员修改车站",
+			"description" : "管理员修改车站",
+			"parentId" : 150
+		},
+		{
+			"id" : 154,
+			"name" : "管理员删除车站",
+			"description" : "管理员删除车站",
+			"parentId" : 150
+		},
+		{
+			"id" : 160,
+			"name" : "管理员列车信息管理",
+			"description" : "管理员对列车类型列表进行增删改查"
+		},
+		{
+			"id" : 161,
+			"name" : "管理员查看列车类型列表",
+			"description" : "管理员查看列车类型列表",
+			"parentId" : 160
+		},
+		{
+			"id" : 162,
+			"name" : "管理员添加列车类型",
+			"description" : "管理员添加列车类型",
+			"parentId" : 160
+		},
+		{
+			"id" : 163,
+			"name" : "管理员修改列车类型",
+			"description" : "管理员修改列车类型",
+			"parentId" : 160
+		},
+		{
+			"id" : 164,
+			"name" : "管理员删除列车类型",
+			"description" : "管理员删除列车类型",
+			"parentId" : 160
+		},
+		{
+			"id" : 170,
+			"name" : "管理员线路价格管理",
+			"description" : "管理员对线路价格列表进行增删改查"
+		},
+		{
+			"id" : 171,
+			"name" : "管理员查看线路基本价格列表",
+			"description" : "管理员查看线路基本价格列表",
+			"parentId" : 170
+		},
+		{
+			"id" : 172,
+			"name" : "管理员添加线路基本价格",
+			"description" : "管理员添加线路基本价格",
+			"parentId" : 170
+		},
+		{
+			"id" : 173,
+			"name" : "管理员修改线路基本价格",
+			"description" : "管理员修改线路基本价格",
+			"parentId" : 170
+		},
+		{
+			"id" : 174,
+			"name" : "管理员删除线路基本价格",
+			"description" : "管理员删除线路基本价格",
+			"parentId" : 170
+		},
+		{
+			"id" : 180,
+			"name" : "管理员配置信息管理",
+			"description" : "管理员对配置信息进行增删改查"
+		}
+	],
+	"testcases" : [
+		{
+			"id" : 0,
+			"name" : "用户登录",
+			"group" : "登录",
+			"input" : {
+				"Username" : "fdse_microservice",
+				"Password" : "111111",
+				"Verification Code" : "T2LS"
+			},
+			"success" : true,
+			"features" : [
+				1, 2
+			],
+			"traces" : [
+				"99d99970-60b8-47fa-8ec2-6d92139e0fec",
+				"fd407adc-a7db-4cae-94d0-d155ad8065b1"
+			],
+			"description" : "用户登录"
+		},
+		{
+			"id" : 1,
+			"name" : "管理员登录",
+			"group" : "登录",
+			"input" : {
+				"Username" : "admin",
+				"Password" : "222222"
+			},
+			"success" : true,
+			"features" : [
+				3
+			],
+			"traces" : [
+				"108314a4-eb31-4105-a6a2-88a6488565dc"
+			],
+			"description" : "管理员登录"
+		},
+		{
+			"id" : 100,
+			"name" : "查票-All-有票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "All"
+			},
+			"success" : true,
+			"features" : [
+				11, 12
+			],
+			"traces" : [
+				"ee877a92-161a-4057-8b57-8763d8d3c838",
+				"cef35451-7428-48be-8e0d-84c17f49ba7e"
+			],
+			"description" : "该方式应能查到票"
+		},
+		{
+			"id" : 101,
+			"name" : "查票-All-无票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "All"
+			},
+			"success" : true,
+			"features" : [
+				11, 12
+			],
+			"traces" : [
+				"314aa9d0-0a58-442d-916b-f78683da1fe7",
+				"f4cd2ada-eef9-40bf-8457-2e2a5af7cebe"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 110,
+			"name" : "查票-GaoTie Dongche-有票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "GaoTie Dongche"
+			},
+			"success" : true,
+			"features" : [
+				11
+			],
+			"traces" : [
+				"be321691-1521-4b93-9a82-7732ac6cb774"
+			],
+			"description" : "该方式应能查到票"
+		},
+
+		{
+			"id" : 111,
+			"name" : "查票-GaoTie Dongche-无票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "GaoTie Dongche"
+			},
+			"success" : true,
+			"features" : [
+				11
+			],
+			"traces" : [
+				"88d4cfea-e742-4159-906f-3a4d3a259e02"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 120,
+			"name" : "查票-Other-有票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0308",
+				"Type" : "Other"
+			},
+			"success" : true,
+			"features" : [
+				12
+			],
+			"traces" : [
+				"33b92cc2-4692-4526-ad2b-7daee18ef2cd"
+			],
+			"description" : "该方式应能查到票"
+		},
+		{
+			"id" : 121,
+			"name" : "查票-Other-无票",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Zhen Jiang",
+				"Terminal" : "Xu Zhou",
+				"Date" : "0308",
+				"Type" : "Other"
+			},
+			"success" : true,
+			"features" : [
+				12
+			],
+			"traces" : [
+				"2134bdb8-cc9d-4f11-962a-a91f63878797"
+			],
+			"description" : "该方式应不能查到票"
+		},
+		{
+			"id" : 130,
+			"name" : "查票-根据Minimum Station Number",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Minimum Station Number"
+			},
+			"success" : true,
+			"features" : [
+				13
+			],
+			"traces" : [
+				"94e22c59-cf75-4b09-9a90-e076fc9f1ca3"
+			],
+			"description" : "该方式查到的票按最小站数排序"
+		},
+		{
+			"id" : 140,
+			"name" : "查票-根据Cheapest",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Cheapest"
+			},
+			"success" : true,
+			"features" : [
+				14
+			],
+			"traces" : [
+				"5549f2d8-56e6-486d-8fd7-34265a68bb65"
+			],
+			"description" : "该方式查到的票按价格排序"
+		},
+		{
+			"id" : 150,
+			"name" : "查票-根据Quickest",
+			"group" : "查票",
+			"input" : {
+				"Starting" : "Nan Jing",
+				"Terminal" : "Shang Hai",
+				"Date" : "0309",
+				"Search Type" : "Quickest"
+			},
+			"success" : true,
+			"features" : [
+				15
+			],
+			"traces" : [
+				"08699c71-c2ba-4af3-aba7-050a423bb0b6"
+			],
+			"description" : "该方式查到的票按经过多长时间排序"
+		},
+
+		{
+			"id" : 301,
+			"name" : "订票-默认乘客，无需保险、餐品和托运",
+			"group" : "订票",
+			"description" : "运行查票-GaoTie Dongche成功后，点击Booking订票，默认乘客，不需要保险、餐品和托运",
+			"input" : {
+				"Trip Id" : "G1234",
+				"Select Seat" : "1st - 250.0",
+				"Select Contacts" : "No. 0",
+				"Assurance" : "No Assurance",
+				"Need Food" : false,
+				"Consign" : false
+			},
+			"success" : true,
+			"features" : [
+				31,32,33,34
+			],
+			"traces" : [
+				"8705abb6-ff9d-4e06-b676-0891644f4bd7",
+				"8fd89f20-429c-47aa-84bf-cce28c70398a",
+				"40b87c0d-7d06-4e7c-8b19-bd10001114ae",
+				"91b5ca6b-aee2-466e-931b-284729c79058"
+			]
+		},
+		{
+			"id" : 302,
+			"name" : "订票-添加乘客，需要保险、餐品和托运",
+			"group" : "订票",
+			"description" : "运行查票-GaoTie Dongche成功后，点击Booking订票，添加联系方式，需要保险、餐品和托运",
+			"input" : {
+				"Trip Id" : "G1234",
+				"Select Seat" : "1st - 250.0",
+				"Select Contacts" : {
+					"No." : "2",
+					"Name" : "Contacts_Three",
+					"Document Type" : "Passport",
+					"Document Number" : "DocumentNumber_Three",
+					"Phone Number" : "ContactsPhoneNum_One"
+				},
+				"Assurance" : "Traffic Accident Assurance 3",
+				"Need Food" : {
+					"Train Food" : "Egg Soup:$3.2"
+				},
+				"Consign" : {
+					"Consignee" : "Consignee_One",
+					"Phone" : "Phone_One",
+					"Weight" : "60"
+				}
+			},
+			"success" : true,
+			"features" : [
+				31, 32, 33, 34, 35, 36
+			],
+			"traces" : [
+				"5abbfe4d-ddb8-4f64-a6e0-f21128911e75",
+				"77f356fc-4f76-4741-b40a-be4130d013d3",
+				"54bf726c-3e00-45bd-a611-95dc28c75d60",
+				"0927b0d3-241a-4f32-a3f0-575abc09a023",
+				"84399349-a4dd-443c-b7b7-d8b845b697b1",
+				"6749da31-adfa-4cb5-b495-4b3e9d695d0c"
+			]
+		},
+		{
+			"id" : 510,
+			"name" : "付款",
+			"description" : "在订单管理页面，点击“pay”支付票钱",
+			"input" : {
+				"Select Seat" : "1st - 50.0",
+				"Select Contacts" : {
+					"No." : "2",
+					"Name" : "Contacts_Three",
+					"Document Type" : "Passport",
+					"Document Number" : "DocumentNumber_Three",
+					"Phone Number" : "ContactsPhoneNum_One"
+				},
+				"Assurance" : "Traffic Accident Assurance 3",
+				"Need Food" : {
+					"Train Food" : "Egg Soup:$3.2"
+				},
+				"Consign" : {
+					"Consignee" : "Consignee_One",
+					"Phone" : "Phone_One",
+					"Weight" : "60"
+				}
+			},
+			"success" : true,
+			"features" : [
+				51
+			],
+			"traces" : [
+				"47842509-158c-47e5-b865-250a50b17624"
+			]
+		},
+		{
+			"id" : 1010,
+			"name" : "管理员查看订票列表",
+			"input" : "管理员进入Order页面",
+			"success" : true,
+			"features" : [
+				101
+			],
+			"traces" : [
+				"49987761-2488-4a8c-90e5-2780627ea4a5"
+			],
+			"description" : "管理员查看订票列表"
+		},
+		{
+			"id" : 1020,
+			"name" : "管理员添加订单",
+			"input" : {
+				"Bought Date":"1583678462998",
+				"Travel Date":"1501257600000",
+				"Travel Time":"1367629320000",
+				"Account":"4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+				"Passenger":"Contacts_Two",
+				"Document Type":"2",
+				"Document Number":"DocumentNumber_Two",
+				"Train Number":"G1237",
+				"Coach Number":"5",
+				"Seat Class":"2",
+				"Seat Number":"FirstClass-30",
+				"From":"nanjing",
+				"To":"shanghaihongqiao",
+				"Status":"0",
+				"Price":"200.0"
+			},
+			"success" : true,
+			"features" : [
+				102
+			],
+			"traces" : [
+				"d79074f9-2884-40f8-8f60-61abd70206d9"
+			],
+			"description" : "管理员添加订单"
+		},
+		{
+			"id" : 1030,
+			"name" : "管理员更新订单",
+			"input" : {
+				"Order Id" : "ce3431d9-925c-4945-aae5-53a0a1392d78",
+				"Passenger":"Contacts_Three",
+				"Document Type":"1",
+				"Document Number":"DocumentNumber_Three",
+				"Status":"1",
+				"Price":"140.0"
+			},
+			"success" : true,
+			"features" : [
+				103
+			],
+			"traces" : [
+				"b23e1f1a-7099-4ee3-a7ce-c7afcef1330f"
+			],
+			"description" : "管理员修改订单"
+		},
+		{
+			"id" : 1040,
+			"name" : "管理员删除订单",
+			"input" : {
+				"Order Id" : "ce3431d9-925c-4945-aae5-53a0a1392d78"
+			},
+			"success" : true,
+			"features" : [
+				104
+			],
+			"traces" : [
+				"20ef105b-53db-4331-bf48-65cfc404cf0e"
+			],
+			"description" : "管理员删除订单"
+		},
+		{
+			"id" : 1110,
+			"name" : "管理员查看路线列表",
+			"input" : "管理员进入路线列表页面",
+			"success" : true,
+			"features" : [
+				111
+			],
+			"traces" : [
+				"d3d217a4-5a03-47d4-969e-544624b36fe4"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 1120,
+			"name" : "管理员添加路线",
+			"input" : {
+				"Stations":"[\"yingtan\",\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"]",
+				"Distances":"[0,400,350,1000,1300]",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				112
+			],
+			"traces" : [
+				"10de6104-46f0-46f7-a5bd-dd65509778fc"
+			],
+			"description" : "输入错误格式的数据，不应添加成功"
+		},
+		{
+			"id" : 1121,
+			"name" : "管理员添加路线",
+			"input" : {
+				"Stations":"[\"yingtan\",\"shanghai\",\"nanjing\",\"shijiazhuang\",\"taiyuan\"]",
+				"Distances":"[0,200,350,1000,1300]",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				112
+			],
+			"traces" : [
+				"65a76e36-68e3-42a4-b8d6-1953530ed038"
+			],
+			"description" : "输入错误格式的数据，不应添加成功"
+		},
+		{
+			"id" : 1122,
+			"name" : "管理员添加路线",
+			"input" : {
+				"Stations":"yingtan,shanghai,nanjing,shijiazhuang,taiyuan",
+				"Distances":"0,200,350,1000,1300",
+				"Start Station":"yingtan",
+				"Terminal Station": "taiyuan"
+			},
+			"success" : true,
+			"features" : [
+				112
+			],
+			"traces" : [
+				"fd5b3c6c-12c7-44c6-8165-0f9eddf259a0"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 1130,
+			"name" : "管理员添加路线",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04",
+				"Stations":"shanghai,nanjing,shijiazhuang,taiyuan->nanjing,shijiazhuang,taiyuan,yingtan",
+				"Distances":"0,350,1000,1300",
+				"Start Station":"shanghai",
+				"Terminal Station": "nanjing"
+			},
+			"success" : false,
+			"features" : [
+				113
+			],
+			"traces" : [
+				"e3260bf6-5d39-46c3-9b8e-83e8f6290434"
+			],
+			"description" : "改路线，不改起止地点，应不能修改成功，结果修改成功了"
+		},
+		{
+			"id" : 1131,
+			"name" : "管理员修改路线",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04",
+				"Stations":"shanghai,nanjing,shijiazhuang,taiyuan->nanjing,shijiazhuang,taiyuan,yingtan",
+				"Distances":"0,350,1000,1300->0,500,1100,1400",
+				"Start Station":"shanghai->nanjing",
+				"Terminal Station": "nanjing->yingtan"
+			},
+			"success" : true,
+			"features" : [
+				113
+			],
+			"traces" : [
+				"fa39c87b-e33f-42b7-93ca-aa4abc6f1c79"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 1140,
+			"name" : "管理员删除路线",
+			"input" : {
+				"Route Id" : "0b23bd3e-876a-4af3-b920-c50a90c90b04"
+			},
+			"success" : true,
+			"features" : [
+				114
+			],
+			"traces" : [
+				"e6782a3f-eb5b-4ac4-87ba-ec8033ab46cb"
+			],
+			"description" : ""
+		},
+		{
+			"id" : 1310,
+			"name" : "管理员查看用户联系人信息",
+			"input" : "页面查看",
+			"success" : true,
+			"features" : [
+				131
+			],
+			"traces" : [
+				"6b7075be-a2e9-46f3-b82c-0f4af651f5c2"
+			],
+			"description" : "管理员查看所有用户的联系方式"
+		}
+	]
+}

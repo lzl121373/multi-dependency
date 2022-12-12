@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>首页</title>
+<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+<script type="text/javascript" th:src="@{/js/treeviewutils.js}"></script>
+<script type="text/javascript" th:src="@{/js/feature.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-treeview.min.js}"></script>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-panzoom.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-navigator.css}"></link>
+<style type="text/css">
+.div_cytoscape_content {
+	height: 1000px;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+
+	<div class="container-lg col-sm-12 row" style="margin-bottom: 15px;">
+	
+		<div class="col-sm-3">
+			<div id="treeForTestCase"></div> 
+			<!-- <div id="treeForFeature"></div> -->
+		</div>
+		<div class="col-sm-9">
+			<div id="table">
+				<div>
+					<div id="feature_table">
+						<h3>features</h3>
+						<table class="table table-bordered">
+							<tr>
+								<th>id</th>
+								<th>name</th>
+								<th>description</th>
+								<th>parentFeatureId</th>
+							</tr>
+							<tr th:each="feature : ${features}">
+								<td><span th:text="${feature.featureId}"></span></td>
+								<td><span th:text="${feature.name}"></span></td>
+								<td><span th:text="${feature.description}"></span></td>
+								<td><span th:text="${feature.parentFeatureId}"></span></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div>
+					<div id="testcase_table">
+						<h3>testcases</h3>
+						<table class="table table-bordered">
+							<tr>
+								<th>id</th>
+								<th>name</th>
+								<th>success</th>
+								<th>inputContent</th>
+								<!-- <th>description</th> -->
+							</tr>
+							<tr th:each="testcase : ${testcases}">
+								<td><span th:text="${testcase.testCaseId}"></span></td>
+								<td><span th:text="${testcase.name}"></span></td>
+								<td><span th:text="${testcase.success}"></span></td>
+								<td><span th:text="${testcase.inputContent}"></span></td>
+								<!-- <td><span th:text="${testcase.description}"></span></td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+				<div id="content" class="col-sm-12">
+					<div>
+						<!-- <h3 id="title">TestCase executes Features</h3> -->
+						<!-- <button id="test">test</button> -->
+					</div>
+					<div id="graph" class="div_cytoscape_content"></div>
+					
+				</div>
+
+		</div>
+		<div class="col-sm-12">
+			<div>
+				<!-- <h3 id="title">所有Feature相关的微服务</h3> -->
+			</div>
+			<div id="all"></div>
+			<button id="test">保存图片</button>
+			<div><img id="png-eg" /></div>
+		</div>
+		<div class="col-sm-12">
+			<div id="graphTestAPI" class="div_cytoscape_content"></div>
+		</div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+			featureInit();
+			toHTML("all", -1, $("#all"));
+		}); 
+		// ]]>
+	</script>
+</body>
+</html>

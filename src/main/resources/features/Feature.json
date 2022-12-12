@@ -1,0 +1,63 @@
+{
+	"Features" : [
+		{
+			"id" : "",
+			"name" : ""
+		}, 
+		{
+			"id" : "",
+			"name" : ""
+		},
+		{
+			"id" : "",
+			"name" : ""
+		}
+	],
+	"TestCases" : [
+		{
+			"id":
+		},
+		{
+			"id"
+		}
+	]
+}
+{
+	"traceId": "",
+	"name" : "", 
+	"parentId" : "",
+	"annotation": [
+		{
+			"timestamp" : "",
+			"value" : "",
+			"host" : {
+				"ip" : "",
+				"port": 1234
+			}
+		},
+		{
+			"timestamp" : "",
+			"value" : "",
+			"host" : {
+				"ip" : "",
+				"port" 12
+			}
+		}
+	],
+	"append" : [
+		{
+			"key" : "",
+			"value" : "",
+			"annotationType" : ""
+		},
+		{
+			"key" : "",
+			"value" : "",
+			"annotationType" : ""
+		}
+	],
+	"extinfo" : "",
+	"rexxceId" : [
+		
+	]
+}

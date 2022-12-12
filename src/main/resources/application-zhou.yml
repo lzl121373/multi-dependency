@@ -1,0 +1,50 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: admin
+      uri: bolt://localhost:7687
+      #      uri: http://localhost:7474
+      # embedded
+  #      uri: file:///D:/neo4j-community-3.5.3-windows/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 8080
+
+config:
+  starter:
+    cochange: false
+    depends_on: false
+#      cochange: true
+#      depends_on: true
+
+data:
+  project_analyse_threads_count: -1
+  #project_config: src/main/resources/project/train-ticket_fan.json
+  #project_config: src/main/resources/project/source-fan-part.json
+  #project_config: src/main/resources/project/source-fan-part-google.json
+
+  project_config: src/main/resources/project/source-part-clone-file-function-commit.json
+ # project_config: src/main/resources/project/source-fan.json
+  #project_config: src/main/resources/project/depends-zhou.json
+  #project_config: src/main/resources/project/junit-zhou.json
+  dynamic_analyse: false
+  git_analyse: false
+  lib_analyse: false
+  clone_analyse: true
+
+  neo4j:
+    delete: true
+    # batchInserter要插入的数据库
+    #      path: D:/neo4j-community-3.5.3-windows/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+    path: C:/ProgramLocal/neo4j/neo4j-community-3.5.19/data/databases/multi-dependency.db
+
+  #serialize_path: D:/multiple-dependency-project/RepositoryService_fan_google0730.txt
+  serialize_path: D:/multiple-dependency-project/RepositoryService-source-part.txt
+  #serialize_path: D:/multiple-dependency-project/RepositoryService-source-part.txt
+  #serialize_path: D:/multiple-dependency-project/RepositoryService_fan_train_ticket.txt
+
+  test: this property is for YamlUtilsTest

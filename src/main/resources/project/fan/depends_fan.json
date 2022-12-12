@@ -1,0 +1,126 @@
+{
+	"architectures": {},
+	"projects" : [{
+			"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.6b",
+			"language": "java",
+			"excludes" : [
+				"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.6b\\src\\test\\resources",
+				"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.6b\\target\\classes",
+				"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.6b\\target\\test-classes"
+				]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.5h",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.5h\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.5h\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.5h\\target\\test-classes"
+			]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.4",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.4\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.4\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.4\\target\\test-classes"
+			]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.3d",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.3d\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.3d\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.3d\\target\\test-classes"
+			]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.2",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.2\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.2\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.2\\target\\test-classes"
+			]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.1a",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.1a\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.1a\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.1a\\target\\test-classes"
+			]
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.0",
+		"language": "java",
+		"excludes" : [
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.0\\src\\test\\resources",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.0\\target\\classes",
+			"D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.0\\target\\test-classes"
+			]
+	}],
+	"dynamics": {},
+	"gits": [{
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.6b",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "04ab36ed13bde857e9f1d904780fb4c4df36f0e5",
+		"commit_id_to": "bf9375e60c3adc954db6850a7aeb2b2d19926977",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.5h",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "818a9643005ff2b996f40eb6bf6c90c4a4a12c41",
+		"commit_id_to": "23659135c34b9001b295def775ca28131d6a0944",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.4",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "ed49e71ca2c6cc8fc001ed4881d113f73510ddaa",
+		"commit_id_to": "f6364da09d70d8ef4c1c35e9b7017ef47a19b98c",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.3d",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "ee6513673e6ce32d9a20fb4d028dff3774490d8c",
+		"commit_id_to": "4d1742fa08b667932fac3972d52eafcafcb3d830",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.2",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "fdf8b6e6ab04a9a1fee7da5ca84675f13838da0a",
+		"commit_id_to": "56df947bb2d0eb23149ddb036f2e2aa34e1e33bb",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.1a",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "be84221deea77f2f1e6e3302dd1f9b4ea01ec605",
+		"commit_id_to": "0aa68e1b303d8ecfaa9d070aef5f9edc02a773cc",
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}, {
+		"path": "D:\\multiple-dependency-project\\depends-update\\origin\\depends-0.9.0",
+		"specify_commit_range": true,
+		"specify_by_commit_id": true,
+		"commit_id_from": "44948be992c936553ec976fc36264129ccaf1630",
+		"commit_id_to": "591411548f540dd2d9140a07d9664cdd89946ca0",
+		"calculate_cochange": false,
+		"issues_path": "src/main/resources/git/issues/depends.json"
+	}],
+	"libs": [],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/depends-fan/0.9.6b/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/depends-fan/0.9.6b/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/depends-fan/0.9.6b/result/type123_method_group_result.csv"
+	}, {
+		"language"   : "java",
+		"granularity": "function",
+		"name_path"  : "src/main/resources/clone/function/depends-fan/0.9.6b/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/function/depends-fan/0.9.6b/similarity.csv",
+		"group_path" : "src/main/resources/clone/function/depends-fan/0.9.6b/result/type123_method_group_result.csv"
+	}]
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>指标</title>
+<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/jquery.treeview.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/popper-1.14.7.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/jquery-1.12.0.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/d3.v3.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-panzoom.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-navigator.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-hierarchical.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/layout-base-1.0.2.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cose-base-1.0.2.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-cose-bilkent-4.1.0.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-undo-red-1.3.3.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/expand-collapse/cytoscape-expand-collapse.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/dagre.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-dagre.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/cytoscape.js-3.13.1/cytoscape-klay.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-multiselect-0.9.15.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/ztree/jquery.ztree.all.js}"></script>
+<script type="text/javascript" th:src="@{/js/import/echarts-4.7.0/dist/echarts.js}"></script>
+<script type="text/javascript" th:src="@{/js/windowUtil.js}"></script>
+<script type="text/javascript" th:src="@{/js/cytoscapeutils.js}"></script>
+<script type="text/javascript" th:src="@{/js/excelUtil.js}"></script>
+<script type="text/javascript" th:src="@{/js/metric.js}"></script>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-multiselect-0.9.15.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-treeview.min.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-panzoom.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/cytoscape.js-navigator.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/jquery.jqplot.css}"></link>
+<link rel="stylesheet" th:href="@{/css/import/ztree/zTreeStyle/zTreeStyle.css}"></link>
+<link rel="stylesheet" th:href="@{/css/circlechart.css}"></link>
+<style type="text/css">
+.div_cytoscape_div{
+	background-color: #ffffff;
+}
+.div_cytoscape {
+	width: 83%;
+	height: 500px;
+	margin-bottom: 5px;
+}
+.div_cytoscape_content {
+	width: 100%;
+	height: 500px;
+	border: 1px solid #000000;
+}
+.div_cytoscape_treeview {
+	padding: 5px;
+	width: 17%; 
+	float: left; 
+	display: inline; 
+	overflow: scroll;
+	border-left: 1px solid #000;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	height: 500px;
+}
+</style>	
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12 row" style="margin-bottom: 15px;">
+		<!-- <div class="col-sm-4">
+			<table class="table">
+				<tr>
+					<td align="right"><b>project: </b></td>
+					<td>fastjson-1.2.56</td>
+				</tr>
+				<tr>
+					<td align="right"><b>language: </b></td>
+					<td>java</td>
+				</tr>
+				<tr>
+					<td align="right"><b>NOP: </b></td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td align="right"><b>NOF: </b></td>
+					<td>190</td>
+				</tr>
+				<tr>
+					<td align="right"><b>NOM: </b></td>
+					<td>2018</td>
+				</tr>
+				<tr>
+					<td align="right"><b>LOC: </b></td>
+					<td>42323</td>
+				</tr>
+				<tr>
+					<td align="right"><b>Commits: </b></td>
+					<td>554</td>
+				</tr>
+			</table>
+		</div> -->
+		<div class="col-sm-12">
+			<ul>
+				<li><a href="#projectMetricsDiv">项目指标</a></li>
+				<li><a href="#packageMetricsDiv">目录指标</a></li>
+				<li><a href="#fileMetricsDiv">文件指标</a></li>
+			</ul>
+		</div>
+		<div id="projectMetricsDiv" class="col-sm-12">
+			<div><h3>Project</h3></div>
+<!--			<div class="col-sm-12"><button id="projectButton" class="btn btn-primary">输出 excel</button></div>-->
+			<div id="projectMetrics" class="col-sm-12">
+			
+			</div>
+		</div>
+		<div id="packageMetricsDiv" class="col-sm-12">
+			<div><h3>Package</h3></div>
+			<div id="packageMetrics" class="col-sm-12">
+			
+			</div>
+		</div>
+		<div id="fileMetricsDiv" class="col-sm-12">
+			<div><h3>File</h3></div>
+<!--			<div class="col-sm-12"><button id="fileButton" class="btn btn-primary">全部输出</button><a href="/metric/excel/file">打印</a></div>-->
+			<div id="fileMetrics" class="col-sm-12">
+			
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+			metric().init();		
+		});
+		// ]]>
+	</script>
+<!--	<script type="text/javascript" th:src="@{/js/circlechart.js}"></script>-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__druid",
+		"includeDirs": [],
+		"microserviceName": "alibaba__fdse__druid",
+		"autoInclude": true,
+		"serviceGroupName": "source",
+		"project": "alibaba__fdse__druid",
+		"language": "java",
+		"isMicroservice": true
+	}, {
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__dubbo",
+		"includeDirs": [],
+		"microserviceName": "alibaba__fdse__dubbo",
+		"autoInclude": true,
+		"serviceGroupName": "source",
+		"project": "alibaba__fdse__dubbo",
+		"language": "java",
+		"isMicroservice": true
+	}, {
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__fastjson",
+		"includeDirs": [],
+		"microserviceName": "alibaba__fdse__fastjson",
+		"autoInclude": true,
+		"serviceGroupName": "source",
+		"project": "alibaba__fdse__fastjson",
+		"language": "java",
+		"isMicroservice": true
+	}],
+	"dynamics": {
+	},
+	"gits": [{
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__druid",
+		"commit_id_from": "",
+		"commit_id_to": ""
+	}, {
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__dubbo",
+		"commit_id_from": "",
+		"commit_id_to": ""
+	}, {
+		"path": "D:\\sourceCode\\source-java-part\\alibaba__fdse__fastjson",
+		"commit_id_from": "",
+		"commit_id_to": ""
+	}],
+	"libs": [],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/source-part-fan/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/source-part-fan/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-part-fan/result/type123_method_group_result.csv"
+	},
+	{
+		"language"   : "java",
+		"granularity": "function",
+		"name_path"  : "src/main/resources/clone/function/source-part-fan/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/function/source-part-fan/similarity.csv",
+		"group_path" : "src/main/resources/clone/function/source-part-fan/result/type123_method_group_result.csv"
+	}
+	]
+}

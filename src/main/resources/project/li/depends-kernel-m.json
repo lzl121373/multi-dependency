@@ -1,0 +1,40 @@
+{
+  "architectures": {},
+  "projects": [{
+    "path": "D:\\program\\kernel_liteos_m",
+    "includeDirs": [],
+    "microserviceName": "kernel_liteos_m",
+    "autoInclude": true,
+    "serviceGroupName": "kernel_liteos_m",
+    "project": "kernel_liteos_m",
+    "language": "cpp",
+    "isMicroservice": true,
+    "excludes": [
+      "D:\\program\\kernel_liteos_m\\testsuits"
+    ]
+  }],
+  "dynamics": {
+    "file_suffixes": [
+      ""
+    ],
+    "logs_path": "",
+    "features_path": ""
+  },
+  "gits": [
+    {
+      "path": "D:\\program\\kernel_liteos_m",
+      "project": "kernel_liteos_m",
+      "specify_commit_range": false,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_id_current": "",
+      "commit_time_since": "2019-01-01 00:00:00",
+      "commit_time_until": "2021-01-31 23:59:59",
+      "issueFrom": "jira",
+      "issues_directory": "",
+      "calculate_cochange": false
+    }],
+  "libs": [],
+  "clones": []
+}

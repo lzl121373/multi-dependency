@@ -1,0 +1,40 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\android",
+		"language": "java"
+	}, {
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\guava",
+		"language": "java"
+	}, {
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\guava-bom",
+		"language": "java"
+	}, {
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\guava-gwt",
+		"language": "java"
+	}, {
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\guava-testlib",
+		"language": "java"
+	}, {
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy\\guava-tests",
+		"language": "java"
+	}],
+	"dynamics": {
+	},
+	"gits": [{
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy",
+		"specify_commit_range": true,
+		"commit_time_since": "2019-02-14 22:36:33",
+	    "commit_time_until": "2020-07-01 20:05:19",
+		"calculate_cochange": false
+	}],
+	"libs": [],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/source-part-guava-zhou/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/source-part-guava-zhou/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-part-guava-zhou/result/type123_method_group_result.csv"
+	}
+	]
+}

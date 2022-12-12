@@ -1,0 +1,264 @@
+{
+  "architectures": {},
+  "projects": [
+    {
+      "path": "D:\\FDSE\\source-part\\HdrHistogram_c",
+      "includeDirs": [],
+      "microserviceName": "HdrHistogram_c",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "HdrHistogram_c",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\hiredis",
+      "includeDirs": [],
+      "microserviceName": "hiredis",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "hiredis",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\jemalloc",
+      "includeDirs": [],
+      "microserviceName": "jemalloc",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "jemalloc",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\linenoise",
+      "includeDirs": [],
+      "microserviceName": "linenoise",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "linenoise",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\lua",
+      "includeDirs": [],
+      "microserviceName": "lua",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "lua",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\nginx",
+      "includeDirs": [],
+      "microserviceName": "nginx",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "nginx",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\phpredis",
+      "includeDirs": [],
+      "microserviceName": "phpredis",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "phpredis",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\redis",
+      "includeDirs": [],
+      "microserviceName": "redis",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "redis",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\sds",
+      "includeDirs": [],
+      "microserviceName": "sds",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "sds",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\sqlite",
+      "includeDirs": [],
+      "microserviceName": "sqlite",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "sqlite",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    },{
+      "path": "D:\\FDSE\\source-part\\webdis",
+      "includeDirs": [],
+      "microserviceName": "webdis",
+      "autoInclude": true,
+      "serviceGroupName": "source-part",
+      "project": "webdis",
+      "language": "cpp",
+      "isMicroservice": true,
+      "excludes": [
+      ]
+    }
+  ],
+  "dynamics": {
+  },
+  "gits": [
+    {
+      "path": "D:\\FDSE\\source-part\\HdrHistogram_c",
+      "project": "HdrHistogram_c",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\hiredis",
+      "project": "hiredis",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\jemalloc",
+      "project": "jemalloc",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\linenoise",
+      "project": "linenoise",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\lua",
+      "project": "lua",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\nginx",
+      "project": "nginx",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\phpredis",
+      "project": "phpredis",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\redis",
+      "project": "redis",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\sds",
+      "project": "sds",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\sqlite",
+      "project": "sqlite",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    },{
+      "path": "D:\\FDSE\\source-part\\webdis",
+      "project": "webdis",
+      "specify_commit_range": true,
+      "specify_by_commit_id": false,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "2014-08-31 00:00:00",
+      "commit_time_until": "2020-08-31 23:59:59",
+      "issues_path": "",
+      "calculate_cochange": false
+    }
+  ],
+  "libs": [
+  ],
+  "clones": [
+    {
+      "language"   : "cpp",
+      "granularity": "file",
+      "name_path"  : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\MeasureIndex.csv",
+      "result_path": "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\similarity.csv",
+      "group_path" : "D:\\FDSE\\multi-dependency\\tool_clone\\detect\\python\\file\\result\\type123_method_group_result.csv"
+    }
+  ]
+}

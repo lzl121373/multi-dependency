@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "path": "D:\\my_data\\SDTeam\\multi-dependency",
+      "project": "multi-dependency",
+      "language": "java",
+      "isMicroservice": false,
+      "excludes": [
+        "D:\\my_data\\SDTeam\\multi-dependency\\target",
+        "D:\\my_data\\SDTeam\\multi-dependency\\src\\test"
+      ]
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+  },
+  "gits": [
+    {
+      "path": "D:\\my_data\\SDTeam\\multi-dependency",
+      "specify_commit_range": false,
+      "specify_by_commit_id": true,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "",
+      "commit_time_until": "",
+      "issues_path": "",
+      "calculate_cochange": true
+    }
+  ],
+  "libs": [
+  ],
+  "clones": [
+  ]
+}

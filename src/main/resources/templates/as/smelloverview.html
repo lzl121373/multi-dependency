@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smell Overview</title>
+	<script type="text/javascript" th:src="@{/js/import/jquery-3.4.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/import/echarts-4.7.0/dist/echarts.js}"></script>
+	<script type="text/javascript" th:src="@{/js/as/smelloverview.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"/>
+</head>
+<body>
+	<div th:include="nav.html::nav"></div>
+	<div class="col-sm-12">
+		<div style="width: 100%">
+			<div id='histogram' style='height: 400px; width: 100%;'></div>
+		</div>
+		<div style="width: 100%">
+			<div id="content" style="width: 100%"></div>
+		</div>
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		//<![CDATA[
+		 $(document).ready(function() {
+		 	var projects = [[${projects}]];
+		 	var projectTotalMap = [[${projectTotalMap}]];
+			var fileSmellOverviewMap = [[${fileSmellOverviewMap}]];
+			var packageSmellOverviewMap = [[${packageSmellOverviewMap}]];
+			 smellOverview().smellOverview(projects, projectTotalMap, fileSmellOverviewMap, packageSmellOverviewMap);
+		});
+		// ]]>
+	</script>
+<!--	<script type="text/javascript" th:src="@{/js/circlechart.js}"></script>-->
+</body>
+</html>

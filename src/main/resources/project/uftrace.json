@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "path": "D:\\my_data\\SDTeam\\multi_dependencies\\dynamic_dependency\\uftrace",
+      "project": "uftrace",
+      "language": "cpp",
+      "isMicroservice": false,
+      "excludes": [
+      ],
+      "includeDirs": [
+      ],
+      "autoInclude": true
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+  },
+  "gits": [
+  ],
+  "libs": [
+  ],
+  "clones": [
+  ]
+}

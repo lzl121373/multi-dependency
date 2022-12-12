@@ -1,0 +1,25 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy",
+		"language": "java"
+	}],
+	"dynamics": {
+	},
+	"gits": [{
+		"path": "D:\\sourceCode\\source-java-part-google\\google__fdse__guava_copy",
+		"specify_commit_range": true,
+		"commit_time_since": "2019-02-14 22:36:33",
+	    "commit_time_until": "2020-07-01 20:05:19",
+		"calculate_cochange": false
+	}],
+	"libs": [],
+	"clones": [{
+		"language"   : "java",
+		"granularity": "file",
+		"name_path"  : "src/main/resources/clone/file/source-part-guava-zhou/java/result/MeasureIndex2.csv",
+		"result_path": "src/main/resources/clone/file/source-part-guava-zhou/java/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-part-guava-zhou/java/result/type123_method_group_result.csv"
+	}
+	]
+}

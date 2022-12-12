@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "path": "C:\\Users\\SongJee\\Desktop\\AbstractFactoryMazeLab\\src\\maze",
+      "project": "maze",
+      "language": "java",
+      "isMicroservice": false,
+      "excludes": [
+      ]
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+  },
+  "gits": [
+  ],
+  "libs": [
+  ],
+  "clones": [
+  ]
+}

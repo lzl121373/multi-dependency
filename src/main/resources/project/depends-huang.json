@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "path": "D:\\my_data\\Dissertation\\depends-0.9.6b",
+      "project": "depends",
+      "language": "java",
+      "isMicroservice": false,
+      "excludes": [
+      ]
+    }
+  ],
+  "architectures": {
+  },
+  "dynamics": {
+  },
+  "gits": [
+    {
+      "path": "D:\\my_data\\Dissertation\\depends-0.9.6b",
+      "specify_commit_range": false,
+      "specify_by_commit_id": true,
+      "commit_id_from": "",
+      "commit_id_to": "",
+      "commit_time_since": "",
+      "commit_time_until": "",
+      "issues_path": "",
+      "calculate_cochange": false
+    }
+  ],
+  "libs": [
+  ],
+  "clones": [{
+    "language"   : "java",
+    "granularity": "file",
+    "name_path"  : "src/main/resources/clone/file/depends-huang/0.9.6b/result/MeasureIndex.csv",
+    "result_path": "src/main/resources/clone/file/depends-huang/0.9.6b/similarity.csv",
+    "group_path" : "src/main/resources/clone/file/depends-huang/0.9.6b/result/type123_method_group_result.csv"
+  }, {
+    "language"   : "java",
+    "granularity": "function",
+    "name_path"  : "src/main/resources/clone/function/depends-huang/0.9.6b/result/MeasureIndex.csv",
+    "result_path": "src/main/resources/clone/function/depends-huang/0.9.6b/similarity.csv",
+    "group_path" : "src/main/resources/clone/function/depends-huang/0.9.6b/result/type123_method_group_result.csv"
+  }]
+}

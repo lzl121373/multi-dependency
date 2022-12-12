@@ -1,0 +1,36 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: 123456
+      uri: bolt://localhost:7687
+      #      uri: http://localhost:7474
+      # embedded
+  #      uri: file:///D:/neo4j-community-3.5.3-windows/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 8080
+
+config:
+  starter:
+    cochange: false
+    depends_on: false
+
+data:
+  project_config: src/main/resources/project/fastjson-1.2.31.json
+  project_analyse_threads_count: 5
+  dynamic_analyse: false
+  git_analyse: false
+  lib_analyse: false
+  clone_analyse: false
+
+  neo4j:
+    delete: true
+    path: D:/software/neo4j-community-3.5.3/data/databases/multiple.dependency.db
+
+  serialize_path: C:/Users/SongJee/Desktop/lab/serializePath/RepositoryService.txt
+
+  test: this property is for YamlUtilsTest

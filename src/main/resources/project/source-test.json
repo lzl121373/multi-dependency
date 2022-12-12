@@ -1,0 +1,42 @@
+{
+	"architectures": {},
+	"projects": [{
+		"path": "/Users/zdh/workspace/sourceCode/source-test/guava",
+		"includeDirs": [],
+		"microserviceName": "guava",
+		"autoInclude": true,
+		"serviceGroupName": "source-test",
+		"project": "guava",
+		"language": "java",
+		"isMicroservice": true,
+		"excludes": [
+		]
+	}],
+	"dynamics": {
+		"file_suffixes": [
+			""
+		],
+		"logs_path": "",
+		"features_path": ""
+	},
+	"gits": [{
+		"path": "/Users/zdh/workspace/sourceCode/source-test/guava",
+		"project": "guava",
+		"specify_commit_range": true,
+		"specify_by_commit_id": false,
+		"commit_id_from": "a91e6f2f18e7b5a9e72d4d782e11a111729112fb",
+		"commit_id_to": "6410f18c06074e75effb7823c97df98385f822d0",
+		"commit_time_since": "2014-08-31 00:00:00",
+		"commit_time_until": "2020-08-31 23:59:59",
+		"issues_path": "",
+		"calculate_cochange": false
+	}],
+	"libs": [],
+	"clones": [{
+		"language": "java",
+		"granularity": "file",
+		"name_path": "src/main/resources/clone/file/source-test/java/result/MeasureIndex.csv",
+		"result_path": "src/main/resources/clone/file/source-test/java/similarity.csv",
+		"group_path" : "src/main/resources/clone/file/source-test/java/result/type123_method_group_result.csv"
+	}]
+}

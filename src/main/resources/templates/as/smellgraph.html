@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Smell Graph</title>
+    <script type="text/javascript" th:src="@{/js/import/jquery-1.12.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/g6-4.2.5.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/import/bootstrap/bootstrap-3.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/as/smellgraph.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/import/bootstrap/bootstrap-3.3.2.min.css}"/>
+</head>
+<body>
+<script type="text/javascript" th:inline="javascript">
+    $(document).ready(function() {
+        let json_data = [[${json_data}]];
+        drawSmellGraph(json_data);
+    });
+</script>
+<div th:include="nav.html::nav"></div>
+<div class="col-sm-12" style="height: 600px; margin-bottom: 20px;">
+    <div id="smellGraph" style="width: 100%; height: 100%; border: 2px solid black; border-radius: 10px;"></div>
+</div>
+<div class="col-sm-12">
+    <div id="smellDetail" style="width: 100%; height: 100%;"></div>
+</div>
+</body>
+</html>
